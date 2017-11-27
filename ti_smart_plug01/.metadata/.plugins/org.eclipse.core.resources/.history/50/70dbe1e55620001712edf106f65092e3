@@ -1,0 +1,37 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+OPT_SRCS += \
+../driverlib/ccs/Release/ccsObjs.opt 
+
+OBJ_SRCS += \
+../driverlib/ccs/Release/adc.obj \
+../driverlib/ccs/Release/aes.obj \
+../driverlib/ccs/Release/camera.obj \
+../driverlib/ccs/Release/cpu.obj \
+../driverlib/ccs/Release/crc.obj \
+../driverlib/ccs/Release/des.obj \
+../driverlib/ccs/Release/flash.obj \
+../driverlib/ccs/Release/gpio.obj \
+../driverlib/ccs/Release/hwspinlock.obj \
+../driverlib/ccs/Release/i2c.obj \
+../driverlib/ccs/Release/i2s.obj \
+../driverlib/ccs/Release/interrupt.obj \
+../driverlib/ccs/Release/pin.obj \
+../driverlib/ccs/Release/prcm.obj \
+../driverlib/ccs/Release/sdhost.obj \
+../driverlib/ccs/Release/shamd5.obj \
+../driverlib/ccs/Release/spi.obj \
+../driverlib/ccs/Release/systick.obj \
+../driverlib/ccs/Release/timer.obj \
+../driverlib/ccs/Release/uart.obj \
+../driverlib/ccs/Release/udma.obj \
+../driverlib/ccs/Release/utils.obj \
+../driverlib/ccs/Release/wdt.obj 
+
+OPT_SRCS__QUOTED += \
+"../driverlib/ccs/Release/ccsObjs.opt" 
+
+

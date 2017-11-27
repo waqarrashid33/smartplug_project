@@ -1,0 +1,35 @@
+# FIXED
+
+cc3200.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/cc3200.c
+cc3200.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/datatypes.h
+cc3200.obj: /home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/string.h
+cc3200.obj: /home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/linkage.h
+cc3200.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_types.h
+cc3200.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/cpu.h
+cc3200.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/oslib/osi.h
+cc3200.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/simplelink/user.h
+cc3200.obj: /home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/string.h
+cc3200.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/simplelink/cc_pal.h
+cc3200.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/gpio_if.h
+cc3200.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/prcm.h
+cc3200.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/rom_map.h
+cc3200.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/rom_patch.h
+cc3200.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_memmap.h
+cc3200.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/timer.h
+
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/cc3200.c: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/datatypes.h: 
+/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/string.h: 
+/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/linkage.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_types.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/cpu.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/oslib/osi.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/simplelink/user.h: 
+/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/string.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/simplelink/cc_pal.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/gpio_if.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/prcm.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/rom_map.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/rom_patch.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_memmap.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/timer.h: 

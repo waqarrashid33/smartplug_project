@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+   Copyright (C) 2014 Texas Instruments Incorporated
+
+   All rights reserved. Property of Texas Instruments Incorporated.
+   Restricted rights to use, duplicate or disclose this code are
+   granted through contract.
+
+   The program may not be used without the written permission of
+   Texas Instruments Incorporated or against the terms and conditions
+   stipulated in the agreement under which this program has been supplied,
+   and under no circumstances can it be used with non-TI connectivity device.
+-->
+
+<resources>
+
+    <!--
+    Layout alias to replace the single-pane version of the layout with a
+    two-pane version on Large screens.
+
+    For more on layout aliases, see:
+    http://developer.android.com/training/multiscreen/screensizes.html#TaskUseAliasFilters
+    -->
+    <item name="activity_device_list" type="layout">@layout/activity_device_twopane</item>
+
+</resources>

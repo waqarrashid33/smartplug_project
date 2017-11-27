@@ -1,0 +1,19 @@
+# FIXED
+
+startup_ccs.obj: ../startup_ccs.c
+startup_ccs.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/datatypes.h
+startup_ccs.obj: ../inc/hw_ints.h
+startup_ccs.obj: ../inc/hw_nvic.h
+startup_ccs.obj: ../inc/hw_types.h
+startup_ccs.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/cpu.h
+startup_ccs.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/debug.h
+startup_ccs.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/interrupt.h
+
+../startup_ccs.c: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/datatypes.h: 
+../inc/hw_ints.h: 
+../inc/hw_nvic.h: 
+../inc/hw_types.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/cpu.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/debug.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/interrupt.h: 

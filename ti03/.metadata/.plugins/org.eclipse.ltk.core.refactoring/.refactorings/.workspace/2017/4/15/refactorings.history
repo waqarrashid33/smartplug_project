@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;ti_rtos_config&apos;" deleteContents="false" description="Delete resource &apos;ti_rtos_config&apos;" element1="/ti_rtos_config" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1492000698328"/>
+</session>

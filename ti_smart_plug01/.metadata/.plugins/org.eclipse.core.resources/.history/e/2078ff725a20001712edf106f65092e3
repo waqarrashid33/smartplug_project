@@ -1,0 +1,7 @@
+# FIXED
+
+smartconfig.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/smartconfig.c
+smartconfig.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/datatypes.h
+
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/smartconfig.c: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/datatypes.h: 

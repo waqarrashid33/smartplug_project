@@ -1,0 +1,5 @@
+# FIXED
+
+simplelink/source/netapp.obj: ../simplelink/source/netapp.c
+
+../simplelink/source/netapp.c: 

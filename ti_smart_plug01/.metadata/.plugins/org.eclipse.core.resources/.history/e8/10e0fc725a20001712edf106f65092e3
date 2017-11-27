@@ -1,0 +1,53 @@
+# FIXED
+
+metrology.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/metrology/metrology.c
+metrology.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/datatypes.h
+metrology.obj: /home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdio.h
+metrology.obj: /home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/linkage.h
+metrology.obj: /home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdarg.h
+metrology.obj: /home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/math.h
+metrology.obj: /home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/_defs.h
+metrology.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_types.h
+metrology.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_memmap.h
+metrology.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_ints.h
+metrology.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_adc.h
+metrology.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_gprcm.h
+metrology.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_udma.h
+metrology.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/interrupt.h
+metrology.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/adc.h
+metrology.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/prcm.h
+metrology.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/metrology/udmadrv.h
+metrology.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/udma.h
+metrology.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/uart.h
+metrology.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/pin.h
+metrology.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/rom.h
+metrology.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/rom_map.h
+metrology.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/rom_patch.h
+metrology.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/debug.h
+metrology.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/uart_logger.h
+
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/metrology/metrology.c: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/datatypes.h: 
+/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdio.h: 
+/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/linkage.h: 
+/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdarg.h: 
+/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/math.h: 
+/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/_defs.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_types.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_memmap.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_ints.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_adc.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_gprcm.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_udma.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/interrupt.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/adc.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/prcm.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/metrology/udmadrv.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/udma.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/uart.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/pin.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/rom.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/rom_map.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/rom_patch.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/debug.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/uart_logger.h: 

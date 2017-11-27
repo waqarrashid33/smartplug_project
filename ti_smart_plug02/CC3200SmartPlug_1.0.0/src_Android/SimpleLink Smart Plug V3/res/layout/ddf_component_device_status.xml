@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ddf_deviceStatus"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="@dimen/ddf_horizontal_margin"
+    android:layout_marginRight="@dimen/ddf_horizontal_margin"
+    android:gravity="center"
+    android:text="@string/device_status_value"
+    android:textColor="#FF0000" />
+

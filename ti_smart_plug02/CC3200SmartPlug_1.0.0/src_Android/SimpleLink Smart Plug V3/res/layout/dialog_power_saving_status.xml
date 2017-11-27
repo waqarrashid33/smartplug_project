@@ -1,0 +1,68 @@
+<!--
+   Copyright (C) 2013 Texas Instruments Incorporated
+
+   All rights reserved. Property of Texas Instruments Incorporated.
+   Restricted rights to use, duplicate or disclose this code are
+   granted through contract.
+
+   The program may not be used without the written permission of
+   Texas Instruments Incorporated or against the terms and conditions
+   stipulated in the agreement under which this program has been supplied,
+   and under no circumstances can it be used with non-TI connectivity device.
+-->
+
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+   <TableRow
+        android:id="@+id/tableRow1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Power Saving: " />
+        
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/text_power_saving"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="status" />
+
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Interval: " />
+
+        <TextView
+            android:id="@+id/text_power_saving_interval"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="#" />
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" Seconds" />
+
+    </TableRow>
+
+</TableLayout>

@@ -1,0 +1,167 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Each subdirectory must supply rules for building sources it contributes
+adc.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/adc.c $(GEN_OPTS) | $(GEN_HDRS)
+	@echo 'Building file: $<'
+	@echo 'Invoking: ARM Compiler'
+	"/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armcl" -mv7M4 --float_support=vfplib --abi=eabi -me -O1 --opt_for_speed=2 --fp_mode=strict --include_path="/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src" -g --gcc --define=ccs --define=cc3200 --display_error_number --diag_warning=225 --diag_wrap=off --gen_func_subsections=on --printf_support=full --ual --preproc_with_compile --preproc_dependency="adc.d" $(GEN_OPTS__FLAG) "$(shell echo $<)"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+aes.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/aes.c $(GEN_OPTS) | $(GEN_HDRS)
+	@echo 'Building file: $<'
+	@echo 'Invoking: ARM Compiler'
+	"/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armcl" -mv7M4 --float_support=vfplib --abi=eabi -me -O1 --opt_for_speed=2 --fp_mode=strict --include_path="/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src" -g --gcc --define=ccs --define=cc3200 --display_error_number --diag_warning=225 --diag_wrap=off --gen_func_subsections=on --printf_support=full --ual --preproc_with_compile --preproc_dependency="aes.d" $(GEN_OPTS__FLAG) "$(shell echo $<)"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+camera.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/camera.c $(GEN_OPTS) | $(GEN_HDRS)
+	@echo 'Building file: $<'
+	@echo 'Invoking: ARM Compiler'
+	"/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armcl" -mv7M4 --float_support=vfplib --abi=eabi -me -O1 --opt_for_speed=2 --fp_mode=strict --include_path="/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src" -g --gcc --define=ccs --define=cc3200 --display_error_number --diag_warning=225 --diag_wrap=off --gen_func_subsections=on --printf_support=full --ual --preproc_with_compile --preproc_dependency="camera.d" $(GEN_OPTS__FLAG) "$(shell echo $<)"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+cpu.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/cpu.c $(GEN_OPTS) | $(GEN_HDRS)
+	@echo 'Building file: $<'
+	@echo 'Invoking: ARM Compiler'
+	"/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armcl" -mv7M4 --float_support=vfplib --abi=eabi -me -O1 --opt_for_speed=2 --fp_mode=strict --include_path="/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src" -g --gcc --define=ccs --define=cc3200 --display_error_number --diag_warning=225 --diag_wrap=off --gen_func_subsections=on --printf_support=full --ual --preproc_with_compile --preproc_dependency="cpu.d" $(GEN_OPTS__FLAG) "$(shell echo $<)"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+crc.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/crc.c $(GEN_OPTS) | $(GEN_HDRS)
+	@echo 'Building file: $<'
+	@echo 'Invoking: ARM Compiler'
+	"/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armcl" -mv7M4 --float_support=vfplib --abi=eabi -me -O1 --opt_for_speed=2 --fp_mode=strict --include_path="/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src" -g --gcc --define=ccs --define=cc3200 --display_error_number --diag_warning=225 --diag_wrap=off --gen_func_subsections=on --printf_support=full --ual --preproc_with_compile --preproc_dependency="crc.d" $(GEN_OPTS__FLAG) "$(shell echo $<)"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+des.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/des.c $(GEN_OPTS) | $(GEN_HDRS)
+	@echo 'Building file: $<'
+	@echo 'Invoking: ARM Compiler'
+	"/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armcl" -mv7M4 --float_support=vfplib --abi=eabi -me -O1 --opt_for_speed=2 --fp_mode=strict --include_path="/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src" -g --gcc --define=ccs --define=cc3200 --display_error_number --diag_warning=225 --diag_wrap=off --gen_func_subsections=on --printf_support=full --ual --preproc_with_compile --preproc_dependency="des.d" $(GEN_OPTS__FLAG) "$(shell echo $<)"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+flash.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/flash.c $(GEN_OPTS) | $(GEN_HDRS)
+	@echo 'Building file: $<'
+	@echo 'Invoking: ARM Compiler'
+	"/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armcl" -mv7M4 --float_support=vfplib --abi=eabi -me -O1 --opt_for_speed=2 --fp_mode=strict --include_path="/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src" -g --gcc --define=ccs --define=cc3200 --display_error_number --diag_warning=225 --diag_wrap=off --gen_func_subsections=on --printf_support=full --ual --preproc_with_compile --preproc_dependency="flash.d" $(GEN_OPTS__FLAG) "$(shell echo $<)"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+gpio.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/gpio.c $(GEN_OPTS) | $(GEN_HDRS)
+	@echo 'Building file: $<'
+	@echo 'Invoking: ARM Compiler'
+	"/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armcl" -mv7M4 --float_support=vfplib --abi=eabi -me -O1 --opt_for_speed=2 --fp_mode=strict --include_path="/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src" -g --gcc --define=ccs --define=cc3200 --display_error_number --diag_warning=225 --diag_wrap=off --gen_func_subsections=on --printf_support=full --ual --preproc_with_compile --preproc_dependency="gpio.d" $(GEN_OPTS__FLAG) "$(shell echo $<)"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+hwspinlock.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/hwspinlock.c $(GEN_OPTS) | $(GEN_HDRS)
+	@echo 'Building file: $<'
+	@echo 'Invoking: ARM Compiler'
+	"/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armcl" -mv7M4 --float_support=vfplib --abi=eabi -me -O1 --opt_for_speed=2 --fp_mode=strict --include_path="/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src" -g --gcc --define=ccs --define=cc3200 --display_error_number --diag_warning=225 --diag_wrap=off --gen_func_subsections=on --printf_support=full --ual --preproc_with_compile --preproc_dependency="hwspinlock.d" $(GEN_OPTS__FLAG) "$(shell echo $<)"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+i2c.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/i2c.c $(GEN_OPTS) | $(GEN_HDRS)
+	@echo 'Building file: $<'
+	@echo 'Invoking: ARM Compiler'
+	"/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armcl" -mv7M4 --float_support=vfplib --abi=eabi -me -O1 --opt_for_speed=2 --fp_mode=strict --include_path="/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src" -g --gcc --define=ccs --define=cc3200 --display_error_number --diag_warning=225 --diag_wrap=off --gen_func_subsections=on --printf_support=full --ual --preproc_with_compile --preproc_dependency="i2c.d" $(GEN_OPTS__FLAG) "$(shell echo $<)"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+i2s.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/i2s.c $(GEN_OPTS) | $(GEN_HDRS)
+	@echo 'Building file: $<'
+	@echo 'Invoking: ARM Compiler'
+	"/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armcl" -mv7M4 --float_support=vfplib --abi=eabi -me -O1 --opt_for_speed=2 --fp_mode=strict --include_path="/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src" -g --gcc --define=ccs --define=cc3200 --display_error_number --diag_warning=225 --diag_wrap=off --gen_func_subsections=on --printf_support=full --ual --preproc_with_compile --preproc_dependency="i2s.d" $(GEN_OPTS__FLAG) "$(shell echo $<)"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+interrupt.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/interrupt.c $(GEN_OPTS) | $(GEN_HDRS)
+	@echo 'Building file: $<'
+	@echo 'Invoking: ARM Compiler'
+	"/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armcl" -mv7M4 --float_support=vfplib --abi=eabi -me -O1 --opt_for_speed=2 --fp_mode=strict --include_path="/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src" -g --gcc --define=ccs --define=cc3200 --display_error_number --diag_warning=225 --diag_wrap=off --gen_func_subsections=on --printf_support=full --ual --preproc_with_compile --preproc_dependency="interrupt.d" $(GEN_OPTS__FLAG) "$(shell echo $<)"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+pin.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/pin.c $(GEN_OPTS) | $(GEN_HDRS)
+	@echo 'Building file: $<'
+	@echo 'Invoking: ARM Compiler'
+	"/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armcl" -mv7M4 --float_support=vfplib --abi=eabi -me -O1 --opt_for_speed=2 --fp_mode=strict --include_path="/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src" -g --gcc --define=ccs --define=cc3200 --display_error_number --diag_warning=225 --diag_wrap=off --gen_func_subsections=on --printf_support=full --ual --preproc_with_compile --preproc_dependency="pin.d" $(GEN_OPTS__FLAG) "$(shell echo $<)"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+prcm.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/prcm.c $(GEN_OPTS) | $(GEN_HDRS)
+	@echo 'Building file: $<'
+	@echo 'Invoking: ARM Compiler'
+	"/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armcl" -mv7M4 --float_support=vfplib --abi=eabi -me -O1 --opt_for_speed=2 --fp_mode=strict --include_path="/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src" -g --gcc --define=ccs --define=cc3200 --display_error_number --diag_warning=225 --diag_wrap=off --gen_func_subsections=on --printf_support=full --ual --preproc_with_compile --preproc_dependency="prcm.d" $(GEN_OPTS__FLAG) "$(shell echo $<)"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+sdhost.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/sdhost.c $(GEN_OPTS) | $(GEN_HDRS)
+	@echo 'Building file: $<'
+	@echo 'Invoking: ARM Compiler'
+	"/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armcl" -mv7M4 --float_support=vfplib --abi=eabi -me -O1 --opt_for_speed=2 --fp_mode=strict --include_path="/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src" -g --gcc --define=ccs --define=cc3200 --display_error_number --diag_warning=225 --diag_wrap=off --gen_func_subsections=on --printf_support=full --ual --preproc_with_compile --preproc_dependency="sdhost.d" $(GEN_OPTS__FLAG) "$(shell echo $<)"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+shamd5.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/shamd5.c $(GEN_OPTS) | $(GEN_HDRS)
+	@echo 'Building file: $<'
+	@echo 'Invoking: ARM Compiler'
+	"/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armcl" -mv7M4 --float_support=vfplib --abi=eabi -me -O1 --opt_for_speed=2 --fp_mode=strict --include_path="/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src" -g --gcc --define=ccs --define=cc3200 --display_error_number --diag_warning=225 --diag_wrap=off --gen_func_subsections=on --printf_support=full --ual --preproc_with_compile --preproc_dependency="shamd5.d" $(GEN_OPTS__FLAG) "$(shell echo $<)"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+spi.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/spi.c $(GEN_OPTS) | $(GEN_HDRS)
+	@echo 'Building file: $<'
+	@echo 'Invoking: ARM Compiler'
+	"/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armcl" -mv7M4 --float_support=vfplib --abi=eabi -me -O1 --opt_for_speed=2 --fp_mode=strict --include_path="/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src" -g --gcc --define=ccs --define=cc3200 --display_error_number --diag_warning=225 --diag_wrap=off --gen_func_subsections=on --printf_support=full --ual --preproc_with_compile --preproc_dependency="spi.d" $(GEN_OPTS__FLAG) "$(shell echo $<)"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+systick.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/systick.c $(GEN_OPTS) | $(GEN_HDRS)
+	@echo 'Building file: $<'
+	@echo 'Invoking: ARM Compiler'
+	"/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armcl" -mv7M4 --float_support=vfplib --abi=eabi -me -O1 --opt_for_speed=2 --fp_mode=strict --include_path="/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src" -g --gcc --define=ccs --define=cc3200 --display_error_number --diag_warning=225 --diag_wrap=off --gen_func_subsections=on --printf_support=full --ual --preproc_with_compile --preproc_dependency="systick.d" $(GEN_OPTS__FLAG) "$(shell echo $<)"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+timer.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/timer.c $(GEN_OPTS) | $(GEN_HDRS)
+	@echo 'Building file: $<'
+	@echo 'Invoking: ARM Compiler'
+	"/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armcl" -mv7M4 --float_support=vfplib --abi=eabi -me -O1 --opt_for_speed=2 --fp_mode=strict --include_path="/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src" -g --gcc --define=ccs --define=cc3200 --display_error_number --diag_warning=225 --diag_wrap=off --gen_func_subsections=on --printf_support=full --ual --preproc_with_compile --preproc_dependency="timer.d" $(GEN_OPTS__FLAG) "$(shell echo $<)"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+uart.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/uart.c $(GEN_OPTS) | $(GEN_HDRS)
+	@echo 'Building file: $<'
+	@echo 'Invoking: ARM Compiler'
+	"/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armcl" -mv7M4 --float_support=vfplib --abi=eabi -me -O1 --opt_for_speed=2 --fp_mode=strict --include_path="/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src" -g --gcc --define=ccs --define=cc3200 --display_error_number --diag_warning=225 --diag_wrap=off --gen_func_subsections=on --printf_support=full --ual --preproc_with_compile --preproc_dependency="uart.d" $(GEN_OPTS__FLAG) "$(shell echo $<)"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+udma.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/udma.c $(GEN_OPTS) | $(GEN_HDRS)
+	@echo 'Building file: $<'
+	@echo 'Invoking: ARM Compiler'
+	"/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armcl" -mv7M4 --float_support=vfplib --abi=eabi -me -O1 --opt_for_speed=2 --fp_mode=strict --include_path="/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src" -g --gcc --define=ccs --define=cc3200 --display_error_number --diag_warning=225 --diag_wrap=off --gen_func_subsections=on --printf_support=full --ual --preproc_with_compile --preproc_dependency="udma.d" $(GEN_OPTS__FLAG) "$(shell echo $<)"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+utils.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/utils.c $(GEN_OPTS) | $(GEN_HDRS)
+	@echo 'Building file: $<'
+	@echo 'Invoking: ARM Compiler'
+	"/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armcl" -mv7M4 --float_support=vfplib --abi=eabi -me -O1 --opt_for_speed=2 --fp_mode=strict --include_path="/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src" -g --gcc --define=ccs --define=cc3200 --display_error_number --diag_warning=225 --diag_wrap=off --gen_func_subsections=on --printf_support=full --ual --preproc_with_compile --preproc_dependency="utils.d" $(GEN_OPTS__FLAG) "$(shell echo $<)"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+wdt.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/wdt.c $(GEN_OPTS) | $(GEN_HDRS)
+	@echo 'Building file: $<'
+	@echo 'Invoking: ARM Compiler'
+	"/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armcl" -mv7M4 --float_support=vfplib --abi=eabi -me -O1 --opt_for_speed=2 --fp_mode=strict --include_path="/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src" -g --gcc --define=ccs --define=cc3200 --display_error_number --diag_warning=225 --diag_wrap=off --gen_func_subsections=on --printf_support=full --ual --preproc_with_compile --preproc_dependency="wdt.d" $(GEN_OPTS__FLAG) "$(shell echo $<)"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+

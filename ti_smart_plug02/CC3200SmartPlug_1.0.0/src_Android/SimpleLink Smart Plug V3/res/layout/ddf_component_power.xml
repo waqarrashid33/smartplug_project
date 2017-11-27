@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/ddf_row_height"
+    android:layout_marginLeft="@dimen/ddf_horizontal_margin"
+    android:layout_marginRight="@dimen/ddf_horizontal_margin" >
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:text="@string/power_text" />
+
+    <TextView
+        android:id="@+id/login_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:text="@string/active_unit_text" />
+
+    <TextView
+        android:id="@+id/power"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/textView5"
+        android:layout_toStartOf="@+id/textView5"
+        android:text="@string/default_data_value" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/average_power"
+        android:layout_toStartOf="@+id/average_power"
+        android:text="/" />
+
+    <TextView
+        android:id="@+id/average_power"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/login_status"
+        android:layout_toStartOf="@+id/login_status"
+        android:text="@string/default_data_value" />
+
+</RelativeLayout>

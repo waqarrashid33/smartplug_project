@@ -1,0 +1,19 @@
+# FIXED
+
+driverlib/udma.obj: ../driverlib/udma.c
+driverlib/udma.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_types.h
+driverlib/udma.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_udma.h
+driverlib/udma.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_ints.h
+driverlib/udma.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_memmap.h
+driverlib/udma.obj: ../driverlib/debug.h
+driverlib/udma.obj: ../driverlib/interrupt.h
+driverlib/udma.obj: ../driverlib/udma.h
+
+../driverlib/udma.c: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_types.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_udma.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_ints.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_memmap.h: 
+../driverlib/debug.h: 
+../driverlib/interrupt.h: 
+../driverlib/udma.h: 

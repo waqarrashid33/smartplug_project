@@ -1,0 +1,13 @@
+# FIXED
+
+clienthandler.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/clienthandler.c
+clienthandler.obj: /home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdio.h
+clienthandler.obj: /home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/linkage.h
+clienthandler.obj: /home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdarg.h
+clienthandler.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/datatypes.h
+
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/clienthandler.c: 
+/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdio.h: 
+/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/linkage.h: 
+/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdarg.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/datatypes.h: 

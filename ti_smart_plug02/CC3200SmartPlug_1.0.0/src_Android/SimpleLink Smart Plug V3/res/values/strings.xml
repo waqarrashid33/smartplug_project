@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+   Copyright (C) 2015 Texas Instruments Incorporated
+
+   All rights reserved. Property of Texas Instruments Incorporated.
+   Restricted rights to use, duplicate or disclose this code are
+   granted through contract.
+
+   The program may not be used without the written permission of
+   Texas Instruments Incorporated or against the terms and conditions
+   stipulated in the agreement under which this program has been supplied,
+   and under no circumstances can it be used with non-TI connectivity device.
+-->
+
+<resources>
+
+    <string name="app_full_name">SimpleLink Smart Plug</string>
+    <string name="app_short_name">Smart Plug</string>
+    <string name="default_title_device_detail">Device Detail</string>
+    <string name="crash_toast_text">It seems your application has crashed. Please send the crash report to the developer.</string>
+    
+    
+    <!-- LoginActivity -->
+    <string name="la_username">Username</string>
+    <string name="la_password">Password</string>
+    <string name="la_login">Sign in</string>
+    <string name="la_new_user">New User?</string>
+    <string name="la_register">Register A New Account</string>
+    <string name="la_forgot_password">Forget Password\?</string>
+    <string name="la_password_recovery">Password Recovery</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_sign_up">Sign up for a free account</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="action_forgot_password">Recover lost password</string>
+    <string name="login_progress_signing_in">Loading&#8230;</string>
+    <string name="login_progress_recovering_password">Recovering password&#8230;</string>
+    <string name="login_progress_signing_up">Signing up&#8230;</string>
+    
+    <!-- EditText Error Fields -->
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_unauthorized">Please check the email/password and try again.</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="error_field_invalid">This field is invalid</string>
+    <string name="error_local_running">Device is currently connectedly locally. Please disonnect before changing the local address.</string>
+
+    <!-- Add Device Fragment -->
+    <string name="device_name">Name *</string>
+    <string name="device_portal">Portal</string>
+    <string name="device_vendor">Vendor</string>
+    <string name="device_model">Model</string>
+    <string name="device_serial_number">Serial Number (MAC address) *</string>
+    <string name="hint_device_local_addr">Local Connection Address</string>
+    <string name="add_device_progress_adding_device">Adding device &#8230;</string>
+    <string name="action_add_device">Add Device</string>
+    <string name="action_skip_add">Skip and use local connection only</string>
+    <string name="connet_pref_text">Connection Preference</string>
+    <string-array name="connection_preference">
+        <item>Auto</item>
+        <item>Cloud Connection Only</item>
+        <item>Local Connection Only</item>
+    </string-array>
+    
+
+    <!-- Device Fragment strings -->
+    <string name="action_settings">Settings</string>
+
+    <!-- Device Detail Fragment texts -->
+    <string name="dummy_text">&lt;- If you have any existing device, click one.\n\nYou may also add a new device by performing\nSmartConfig, searching, or adding with manual address\nfrom the menu</string>
+    
+    <string name="default_device">Default Device</string>
+    <string name="default_data_value">0</string>
+    <string name="ddf_button_details">Device Details</string>
+    <string name="device_status_text">Connection Status</string>
+    <string name="device_status_value">Offline</string>
+    <string name="power_text">Real/Average Power</string>
+    <string name="total_power_text">Total Energy Consumption</string>
+    <string name="active_unit_text">W</string>
+    <string name="power_unit_text">kWh</string>
+    <string name="timestamp_text">Time</string>
+    <string name="voltage_text">Voltage</string>
+    <string name="voltage_unit_text">V</string>
+    <string name="current_text">Current</string>
+    <string name="current_unit_text">A</string>
+    <string name="COS_text">Power Factor</string>
+    <string name="COS_unit_text"></string>
+    <string name="frequency_text">Frequency</string>
+    <string name="frequency_unit_text">Hz</string>
+    <string name="VAR_text">Reactive</string>
+    <string name="VAR_unit_text">W</string>
+    <string name="VA_text">Apparent Power</string>
+    <string name="VA_unit_text">W</string>
+    <string name="ddf_switch_relay">Device Powering</string>
+    <string name="current_threshold_value_text">Current Threshold Value</string>
+    <string name="power_saving_text">P. Saving</string>
+    <string name="periodic_update_interval_text">Periodic Update Interval:</string>
+    <string name="periodic_update_interval_unit">s</string>
+    
+    <string-array name="graph_type">
+        <item>Real Power</item>
+        <item>Reactive Power</item>
+        <item>Apparent Power</item>
+        <item>Voltage</item>
+        <item>Current</item>
+        <item>Power Factor</item>
+        <item>Frequency</item>
+    </string-array>
+
+    <!-- Menu strings -->
+    <string name="smart_config">Smart Config</string>
+    <string name="add_device">Add Device</string>
+    <string name="add_local_device">Add Local Device</string>
+    <string name="synchronize_with_cloud">Sync Devices</string>
+    <string name="mdns_search">mDNS Search</string>
+<!--<string name="manual_add_device">Add Device Manually</string> --> 
+    <string name="stop_reconnect">Reconnect</string>
+    <string name="auto_scroll">Auto-Scroll</string>
+    <string name="clear_graph">Clear Graph</string>
+    <string name="about">About</string>
+    <string name="login">Log In</string>
+    <string name="logout">Log Out</string>
+    <string name="exit">Exit Application</string>
+    <string name="add_to_cloud">Add to Cloud</string>
+    
+    <string name="change_device_details">Edit</string>
+    <string name="delete_device">Delete Device</string>
+    
+    <!-- Titles for Activities -->
+    <string name="title_activity_scheduling">Power Scheduling</string>
+    <string name="title_activity_device_registration">DeviceRegistration</string>
+    <string name="title_activity_account_registration">Account Registration</string>
+    <string name="title_activity_mdns">MDNS Search</string>
+    <string name="title_activity_add_device">Add Device</string>
+    
+    <!-- Warning Messages -->
+    <string name="dialog_title_disconnecting">Disconnecting</string>
+    <string name="dialog_title_confirm">Confirmation</string>
+    <string name="dialog_title_error">Error</string>
+    <string name="dialog_title_warning">Warning</string>
+    <string name="dialog_title_edit_details">Edit Details</string>
+    <string name="message_please_wait">Please Wait&#8230;</string>
+    <string name="message_not_signed_in">You have not signed into your cloud account. All activities with this device will only happen in a local connection
+        and will not be synchronized with the cloud until you sign in. In addition, all local readings will not be synchronized with cloud.</string>
+    <string name="message_deletion_warning">Please sign into your cloud account from a webpage and delete the device manually.</string>
+    <string name="message_sp_not_running">It appears that your device is not currently running. Connection Abort.</string>
+    <string name="message_reenable_fail">Re-Enabling feature is not supported in this version. Please sign into the web interface and re-enable the device from there.</string>
+    <string name="message_cloud_connection_error">Cannot acquire data from the cloud service. The internet connection might be unstable or the device requires re-enabling.</string>
+    <string name="message_cellular_warning">You seems to be running on cellular connection. Do you want to proceed connection?</string>
+    <string name="message_device_associated_with_user">The device has already been associated with the account %s.
+        If you want to connect to this deivce, please remove it from the previous account.</string>
+    <string name="message_confirm_add_to_cloud">Would you like to add this device to cloud?</string>
+    <string name="message_no_connection">No Active Connection</string>
+    <string name="message_no_cloud_connection">No cloud connection available because you are not signed in</string>
+    <string name="message_no_local_address">No local connection ability will be available because the address is not entered. Proceed?</string>
+    <string name="message_confirm_sign_out">All active cloud connection will be terminated. Proceed?</string>
+    <string name="message_not_enough_info">"ERROR: Not enough information to connect. Please add this device to cloud or enter an IP address.</string>
+    <string name="message_update_certificate"> Are you sure you want to update the certificate?
+        This update will replace the existing certificate file on the Smart Plug and cannot be reversed.</string>
+    
+    <!-- Misc Messages -->
+    <string name="message_feature_for_future">Feature for Future</string>
+    
+    <!-- Developers -->
+    <string name="About_copyright">Copyright ® 2015 Texas Instruments Inc.</string>
+    <string name="About_team">Author: ECS Applications Team</string>
+    <string name="Dev_Project_Coordinator">Project Coordinator: </string>
+    <string name="Dev_Android_Developer">Android Developer: </string>
+    <string name="Dev_Embedded_Developer">Embedded Developer: </string>
+    <string name="Dev_Board_Design">Board Design:</string>
+    <string name="BF">Beatrice Fankem</string>
+    <string name="VL">Victor Lin</string>
+    <string name="DS">Dheeraj Shetty</string>
+    <string name="PM">Prajay Madhavan</string>
+    <string name="Dev_Exosite_Support_1">Exosite Support: Michael Aanenson</string>
+    <string name="Dev_Exosite_Support_2">Exosite Support: Dan Weaver</string>
+    <string name="Dev_Exosite_Support_3">Exosite Support: Hans Rempel</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terms_of_use">Terms of Use</string>
+    
+    <!-- Drawer Text -->
+    <string name="drawer_open">drawer_open</string>
+    <string name="drawer_close">drawer_close</string>
+
+</resources>

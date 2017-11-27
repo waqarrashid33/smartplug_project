@@ -1,0 +1,87 @@
+<!--
+   Copyright (C) 2013 Texas Instruments Incorporated
+
+   All rights reserved. Property of Texas Instruments Incorporated.
+   Restricted rights to use, duplicate or disclose this code are
+   granted through contract.
+
+   The program may not be used without the written permission of
+   Texas Instruments Incorporated or against the terms and conditions
+   stipulated in the agreement under which this program has been supplied,
+   and under no circumstances can it be used with non-TI connectivity device.-->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="400dp"
+    android:layout_height="400dp"
+    android:gravity="top|center"
+    android:orientation="vertical"
+    tools:context=".DeviceListActivity" >
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/lvi_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Device Name" />
+
+            <EditText
+                android:id="@+id/exosite_username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:ems="10"
+                android:inputType="textAutoCorrect" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/lvi_ip_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Address" />
+
+            <EditText
+                android:id="@+id/exosite_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:ems="10"
+                android:inputType="textNoSuggestions|textVisiblePassword" />
+        </TableRow>
+
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/login_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="#" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>

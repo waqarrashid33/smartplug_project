@@ -1,0 +1,60 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/listview_item_margin"
+    android:descendantFocusability="blocksDescendants" 
+    android:orientation="horizontal" >
+
+    <ImageView
+        android:id="@+id/lvi_image_added"
+        android:layout_width="128dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_margin="@dimen/listview_item_margin"
+        android:adjustViewBounds="true"
+        android:clickable="true"
+        android:focusableInTouchMode="true"
+        android:src="@drawable/icon_add" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toRightOf="@+id/lvi_image_added"
+        android:layout_toEndOf="@+id/lvi_image_added"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/lvi_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="DUMMY"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/lvi_service_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="DUMMY" />
+
+        <TextView
+            android:id="@+id/lvi_mac_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="DUMMY" />
+
+        <TextView
+            android:id="@+id/lvi_ip_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:text="DUMMY" />
+
+    </LinearLayout>
+
+</RelativeLayout>

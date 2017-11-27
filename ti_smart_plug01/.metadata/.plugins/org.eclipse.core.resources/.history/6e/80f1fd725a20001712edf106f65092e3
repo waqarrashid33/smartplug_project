@@ -1,0 +1,5 @@
+# FIXED
+
+simplelink/cc_pal.obj: ../simplelink/cc_pal.c
+
+../simplelink/cc_pal.c: 

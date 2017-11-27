@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+   Copyright (C) 2014 Texas Instruments Incorporated
+
+   All rights reserved. Property of Texas Instruments Incorporated.
+   Restricted rights to use, duplicate or disclose this code are
+   granted through contract.
+
+   The program may not be used without the written permission of
+   Texas Instruments Incorporated or against the terms and conditions
+   stipulated in the agreement under which this program has been supplied,
+   and under no circumstances can it be used with non-TI connectivity device.
+-->
+
+<resources>
+    <color name="holo_light_background_color">#fff3f3f3</color>
+    <color name="red">#D20000</color>
+    <color name="grey_background">#E1E1E1</color>
+    <color name="button_normal">#2888C4</color>
+ 	<color name="grey_text_color">#545454</color>
+ 	<color name="blue_text_color">#0000ED</color>
+ 	<color name="disabled_text_color">#9A9A9A</color>
+ 	<color name="text_color_grey">#575757</color>
+ 	<color name="orange_warning_background">#FFBF40</color>
+ 	
+ 	<!-- TI Colors http://corpmkt.corp.ti.com/elements/colorPalette.shtml -->
+ 	<color name="TI_COLOR_RED">#CC0000</color>
+ 	<color name="TI_COLOR_BLACK">#000000</color>
+ 	<color name="TI_COLOR_GRAY">#AAAAAA</color>
+ 	<color name="TI_COLOR_WHITE">#FFFFFF</color>
+ 	<color name="TI_COLOR_PANTONE_1807">#990000</color>	<!-- Dark Red -->
+ 	<color name="TI_COLOR_PANTONE_5473">#115566</color>	<!-- Dark Cyan -->
+ 	<color name="TI_COLOR_PANTONE_321">#118899</color>	<!-- Cyan -->
+ 	<color name="TI_COLOR_PANTONE_3125">#00bbcc</color>	<!-- Sky Blue -->
+ 	<color name="TI_COLOR_PANTONE_5455">#e0e0e0</color>	<!-- Light Grey -->
+</resources>

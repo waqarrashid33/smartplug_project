@@ -1,0 +1,19 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+O_SRCS += \
+../simplelink/ewarm/OS/Obj/cc_pal.o \
+../simplelink/ewarm/OS/Obj/device.o \
+../simplelink/ewarm/OS/Obj/driver.o \
+../simplelink/ewarm/OS/Obj/flowcont.o \
+../simplelink/ewarm/OS/Obj/fs.o \
+../simplelink/ewarm/OS/Obj/netapp.o \
+../simplelink/ewarm/OS/Obj/netcfg.o \
+../simplelink/ewarm/OS/Obj/nonos.o \
+../simplelink/ewarm/OS/Obj/socket.o \
+../simplelink/ewarm/OS/Obj/spawn.o \
+../simplelink/ewarm/OS/Obj/wlan.o 
+
+

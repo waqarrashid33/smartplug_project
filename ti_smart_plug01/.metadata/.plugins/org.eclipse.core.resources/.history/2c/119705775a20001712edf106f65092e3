@@ -1,0 +1,24 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+C_SRCS += \
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/oslib/osi_tirtos.c 
+
+C_DEPS += \
+./osi_tirtos.d 
+
+OBJS += \
+./osi_tirtos.obj 
+
+OBJS__QUOTED += \
+"osi_tirtos.obj" 
+
+C_DEPS__QUOTED += \
+"osi_tirtos.d" 
+
+C_SRCS__QUOTED += \
+"/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/oslib/osi_tirtos.c" 
+
+

@@ -1,0 +1,19 @@
+# FIXED
+
+driverlib/spi.obj: ../driverlib/spi.c
+driverlib/spi.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_ints.h
+driverlib/spi.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_types.h
+driverlib/spi.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_memmap.h
+driverlib/spi.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_mcspi.h
+driverlib/spi.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_apps_config.h
+driverlib/spi.obj: ../driverlib/interrupt.h
+driverlib/spi.obj: ../driverlib/spi.h
+
+../driverlib/spi.c: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_ints.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_types.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_memmap.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_mcspi.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_apps_config.h: 
+../driverlib/interrupt.h: 
+../driverlib/spi.h: 

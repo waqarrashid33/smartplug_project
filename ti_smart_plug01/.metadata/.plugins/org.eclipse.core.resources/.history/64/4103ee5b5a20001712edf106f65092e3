@@ -1,0 +1,5 @@
+# FIXED
+
+cc_pal.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/simplelink/cc_pal.c
+
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/simplelink/cc_pal.c: 

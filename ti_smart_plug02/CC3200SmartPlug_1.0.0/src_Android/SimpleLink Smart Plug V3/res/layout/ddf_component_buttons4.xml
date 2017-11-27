@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/ddf_row_height"
+    android:layout_marginLeft="@dimen/ddf_horizontal_margin"
+    android:layout_marginRight="@dimen/ddf_horizontal_margin"
+    android:orientation="horizontal"
+    tools:context=".DeviceDetailActivity" >
+
+    <Button
+        android:id="@+id/ddf_button_details"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:text="@string/ddf_button_details" />
+
+    <Button
+        android:id="@+id/ddf_button_switch_table"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="Scheduling" />
+
+</LinearLayout>

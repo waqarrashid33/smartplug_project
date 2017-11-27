@@ -1,0 +1,5 @@
+# FIXED
+
+simplelink/source/nonos.obj: ../simplelink/source/nonos.c
+
+../simplelink/source/nonos.c: 

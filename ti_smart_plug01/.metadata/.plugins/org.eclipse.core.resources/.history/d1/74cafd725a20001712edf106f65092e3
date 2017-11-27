@@ -1,0 +1,29 @@
+# FIXED
+
+pinmux.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/pinmux.c
+pinmux.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/datatypes.h
+pinmux.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/pinmux.h
+pinmux.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_types.h
+pinmux.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_memmap.h
+pinmux.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_gpio.h
+pinmux.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/rom_map.h
+pinmux.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/rom_patch.h
+pinmux.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/pin.h
+pinmux.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/gpio.h
+pinmux.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/prcm.h
+pinmux.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/uart.h
+pinmux.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/gpio_if.h
+
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/pinmux.c: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/datatypes.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/pinmux.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_types.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_memmap.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_gpio.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/rom_map.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/rom_patch.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/pin.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/gpio.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/prcm.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/driverlib/uart.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/gpio_if.h: 

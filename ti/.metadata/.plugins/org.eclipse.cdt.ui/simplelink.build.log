@@ -1,0 +1,22 @@
+
+**** Build of configuration OS for project simplelink ****
+
+/home/waqar/ti/ccsv7/utils/bin/gmake -k all 
+Building file: /home/waqar/ti/cc3200-sdk/simplelink/cc_pal.c
+Invoking: ARM Compiler
+"/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armcl" -mv7M4 --code_state=16 --float_support=vfplib -me -Ooff --include_path="/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include" --include_path="/home/waqar/ti/cc3200-sdk/simplelink" --include_path="/home/waqar/ti/cc3200-sdk/simplelink/include" --include_path="/home/waqar/ti/cc3200-sdk/simplelink/source" --include_path="/home/waqar/ti/cc3200-sdk/driverlib" --include_path="/home/waqar/ti/cc3200-sdk/inc" --include_path="/home/waqar/ti/cc3200-sdk/oslib/" --include_path="/home/waqar/ti/cc3200-sdk/simplelink_extlib/provisioninglib" --define=ccs --define=DISABLE_DEBUGGER_RECONNECT --define=SL_FULL --define=SL_PLATFORM_MULTI_THREADED --define=cc3200 -g --gcc --printf_support=full --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi --ual --preproc_with_compile --preproc_dependency="cc_pal.d"  "/home/waqar/ti/cc3200-sdk/simplelink/cc_pal.c"
+Finished building: /home/waqar/ti/cc3200-sdk/simplelink/cc_pal.c
+ 
+gmake: *** No rule to make target '/home/waqar/ti/cc3200-sdk/simplelink/Source/device.c', needed by 'device.obj'.
+gmake: *** No rule to make target '/home/waqar/ti/cc3200-sdk/simplelink/Source/driver.c', needed by 'driver.obj'.
+gmake: *** No rule to make target '/home/waqar/ti/cc3200-sdk/simplelink/Source/flowcont.c', needed by 'flowcont.obj'.
+gmake: *** No rule to make target '/home/waqar/ti/cc3200-sdk/simplelink/Source/fs.c', needed by 'fs.obj'.
+gmake: *** No rule to make target '/home/waqar/ti/cc3200-sdk/simplelink/Source/netapp.c', needed by 'netapp.obj'.
+gmake: *** No rule to make target '/home/waqar/ti/cc3200-sdk/simplelink/Source/netcfg.c', needed by 'netcfg.obj'.
+gmake: *** No rule to make target '/home/waqar/ti/cc3200-sdk/simplelink/Source/nonos.c', needed by 'nonos.obj'.
+gmake: *** No rule to make target '/home/waqar/ti/cc3200-sdk/simplelink/Source/socket.c', needed by 'socket.obj'.
+gmake: *** No rule to make target '/home/waqar/ti/cc3200-sdk/simplelink/Source/spawn.c', needed by 'spawn.obj'.
+gmake: *** No rule to make target '/home/waqar/ti/cc3200-sdk/simplelink/Source/wlan.c', needed by 'wlan.obj'.
+gmake: Target 'all' not remade because of errors.
+
+**** Build Finished ****

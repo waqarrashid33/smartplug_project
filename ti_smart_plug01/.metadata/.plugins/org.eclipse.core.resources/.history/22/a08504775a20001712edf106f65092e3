@@ -1,0 +1,80 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+ASM_SRCS += \
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/third_party/FreeRTOS/source/portable/CCS/ARM_CM3/portasm.asm 
+
+C_SRCS += \
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/third_party/FreeRTOS/source/croutine.c \
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/third_party/FreeRTOS/source/portable/MemMang/heap_3.c \
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/third_party/FreeRTOS/source/list.c \
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/oslib/osi_freertos.c \
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/third_party/FreeRTOS/source/portable/CCS/ARM_CM3/port.c \
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/third_party/FreeRTOS/source/queue.c \
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/third_party/FreeRTOS/source/tasks.c \
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/third_party/FreeRTOS/source/timers.c 
+
+C_DEPS += \
+./croutine.d \
+./heap_3.d \
+./list.d \
+./osi_freertos.d \
+./port.d \
+./queue.d \
+./tasks.d \
+./timers.d 
+
+OBJS += \
+./croutine.obj \
+./heap_3.obj \
+./list.obj \
+./osi_freertos.obj \
+./port.obj \
+./portasm.obj \
+./queue.obj \
+./tasks.obj \
+./timers.obj 
+
+ASM_DEPS += \
+./portasm.d 
+
+OBJS__QUOTED += \
+"croutine.obj" \
+"heap_3.obj" \
+"list.obj" \
+"osi_freertos.obj" \
+"port.obj" \
+"portasm.obj" \
+"queue.obj" \
+"tasks.obj" \
+"timers.obj" 
+
+C_DEPS__QUOTED += \
+"croutine.d" \
+"heap_3.d" \
+"list.d" \
+"osi_freertos.d" \
+"port.d" \
+"queue.d" \
+"tasks.d" \
+"timers.d" 
+
+ASM_DEPS__QUOTED += \
+"portasm.d" 
+
+C_SRCS__QUOTED += \
+"/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/third_party/FreeRTOS/source/croutine.c" \
+"/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/third_party/FreeRTOS/source/portable/MemMang/heap_3.c" \
+"/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/third_party/FreeRTOS/source/list.c" \
+"/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/oslib/osi_freertos.c" \
+"/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/third_party/FreeRTOS/source/portable/CCS/ARM_CM3/port.c" \
+"/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/third_party/FreeRTOS/source/queue.c" \
+"/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/third_party/FreeRTOS/source/tasks.c" \
+"/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/third_party/FreeRTOS/source/timers.c" 
+
+ASM_SRCS__QUOTED += \
+"/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/third_party/FreeRTOS/source/portable/CCS/ARM_CM3/portasm.asm" 
+
+

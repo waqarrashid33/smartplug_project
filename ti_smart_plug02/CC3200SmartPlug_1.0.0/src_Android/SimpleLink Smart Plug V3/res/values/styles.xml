@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+   Copyright (C) 2014 Texas Instruments Incorporated
+
+   All rights reserved. Property of Texas Instruments Incorporated.
+   Restricted rights to use, duplicate or disclose this code are
+   granted through contract.
+
+   The program may not be used without the written permission of
+   Texas Instruments Incorporated or against the terms and conditions
+   stipulated in the agreement under which this program has been supplied,
+   and under no circumstances can it be used with non-TI connectivity device.
+-->
+
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- the theme applied to the application or activity -->
+    <style name="CustomActionBarTheme"
+        parent="@android:style/Theme.Holo.Light">
+        <item name="android:actionBarStyle">@style/MyActionBar</item>
+    </style>
+    
+    <!-- ActionBar styles -->
+    <style name="MyActionBar"
+        parent="@android:style/Widget.Holo.ActionBar">
+        <item name="android:background">@color/TI_COLOR_RED</item>
+        <item name="android:titleTextStyle">@style/MyActionBar.TitleText</item>
+        <item name="android:actionMenuTextAppearance">@style/MyActionBar.PopupMenu</item>
+    </style>
+    
+    <!-- ActionBar title text -->
+    <style name="MyActionBar.TitleText"
+         parent="@android:style/TextAppearance.Holo.Widget.ActionBar.Title">
+        <item name="android:textColor">@color/TI_COLOR_WHITE</item>
+    </style>
+    
+    <!-- The beef: background color for Action Bar overflow menu -->
+    <style name="MyActionBar.PopupMenu"
+        parent="android:Widget.Holo.Light.PopupWindow">
+        <item name="android:background">@color/TI_COLOR_RED</item>
+    </style>
+
+</resources>

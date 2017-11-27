@@ -1,0 +1,20 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Each subdirectory must supply rules for building sources it contributes
+oslib/osi_freertos.obj: ../oslib/osi_freertos.c $(GEN_OPTS) | $(GEN_HDRS)
+	@echo 'Building file: $<'
+	@echo 'Invoking: ARM Compiler'
+	"/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armcl" -mv7M4 --float_support=vfplib -me -O2 --opt_for_speed=2 --fp_mode=strict --include_path="/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/exosite/" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/utilities/" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/android/" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/metrology/" --include_path="/driverlib/" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/" --include_path="/simplelink/" --include_path="/simplelink/Include/" --include_path="/simplelink/Source/" --include_path="/oslib" --include_path="/third_party/FreeRTOS" --include_path="/third_party/FreeRTOS/source" --include_path="/third_party/FreeRTOS/source/include" --include_path="/third_party/FreeRTOS/source/portable/CCS/ARM_CM3/" --define=ccs --define=USE_FREERTOS --define=SL_PLATFORM_MULTI_THREADED --define=SMARTPLUG_HW --define=cc3200 --printf_support=full --diag_suppress=1 --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi --ual --preproc_with_compile --preproc_dependency="oslib/osi_freertos.d" --obj_directory="oslib" $(GEN_OPTS__FLAG) "$(shell echo $<)"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+oslib/osi_tirtos.obj: ../oslib/osi_tirtos.c $(GEN_OPTS) | $(GEN_HDRS)
+	@echo 'Building file: $<'
+	@echo 'Invoking: ARM Compiler'
+	"/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/bin/armcl" -mv7M4 --float_support=vfplib -me -O2 --opt_for_speed=2 --fp_mode=strict --include_path="/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/exosite/" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/utilities/" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/android/" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/SmartPlugSource/metrology/" --include_path="/driverlib/" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/" --include_path="/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/" --include_path="/simplelink/" --include_path="/simplelink/Include/" --include_path="/simplelink/Source/" --include_path="/oslib" --include_path="/third_party/FreeRTOS" --include_path="/third_party/FreeRTOS/source" --include_path="/third_party/FreeRTOS/source/include" --include_path="/third_party/FreeRTOS/source/portable/CCS/ARM_CM3/" --define=ccs --define=USE_FREERTOS --define=SL_PLATFORM_MULTI_THREADED --define=SMARTPLUG_HW --define=cc3200 --printf_support=full --diag_suppress=1 --diag_warning=225 --diag_wrap=off --display_error_number --gen_func_subsections=on --abi=eabi --ual --preproc_with_compile --preproc_dependency="oslib/osi_tirtos.d" --obj_directory="oslib" $(GEN_OPTS__FLAG) "$(shell echo $<)"
+	@echo 'Finished building: $<'
+	@echo ' '
+
+

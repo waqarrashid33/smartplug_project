@@ -1,0 +1,5 @@
+# FIXED
+
+simplelink/source/driver.obj: ../simplelink/source/driver.c
+
+../simplelink/source/driver.c: 

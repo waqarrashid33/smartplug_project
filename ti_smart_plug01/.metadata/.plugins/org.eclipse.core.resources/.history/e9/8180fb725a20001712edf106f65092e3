@@ -1,0 +1,19 @@
+# FIXED
+
+driverlib/i2s.obj: ../driverlib/i2s.c
+driverlib/i2s.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_types.h
+driverlib/i2s.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_ints.h
+driverlib/i2s.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_memmap.h
+driverlib/i2s.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_mcasp.h
+driverlib/i2s.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_apps_config.h
+driverlib/i2s.obj: ../driverlib/interrupt.h
+driverlib/i2s.obj: ../driverlib/i2s.h
+
+../driverlib/i2s.c: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_types.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_ints.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_memmap.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_mcasp.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_apps_config.h: 
+../driverlib/interrupt.h: 
+../driverlib/i2s.h: 

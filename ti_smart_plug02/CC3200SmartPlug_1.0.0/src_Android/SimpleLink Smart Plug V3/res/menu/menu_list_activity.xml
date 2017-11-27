@@ -1,0 +1,41 @@
+<!--
+   Copyright (C) 2014 Texas Instruments Incorporated
+
+   All rights reserved. Property of Texas Instruments Incorporated.
+   Restricted rights to use, duplicate or disclose this code are
+   granted through contract.
+
+   The program may not be used without the written permission of
+   Texas Instruments Incorporated or against the terms and conditions
+   stipulated in the agreement under which this program has been supplied,
+   and under no circumstances can it be used with non-TI connectivity device.
+-->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item android:id="@+id/add_device"
+          android:icon="@drawable/ic_menu_add"
+          android:title="@string/add_device"
+          android:showAsAction="ifRoom|withText"/>
+    <item android:id="@+id/synchronize_with_cloud"
+          android:icon="@drawable/ic_menu_refresh"
+          android:title="@string/synchronize_with_cloud"
+          android:showAsAction="ifRoom|withText"/>
+    <item android:id="@+id/mdns_search"
+          android:icon="@drawable/ic_menu_search"
+          android:title="@string/mdns_search"
+          android:showAsAction="ifRoom|withText"/>
+    <item android:id="@+id/about"
+          android:icon="@drawable/ic_menu_info_details"
+          android:title="@string/about"
+          android:showAsAction="collapseActionView"/>
+    <item android:id="@+id/privacy_policy"
+		  android:icon="@drawable/ic_menu_notifications"
+          android:title="@string/privacy_policy"
+          android:showAsAction="collapseActionView"/>
+    <item android:id="@+id/kill_service"
+		  android:icon="@drawable/ic_menu_close_clear_cancel"
+          android:title="@string/exit"
+          android:showAsAction="collapseActionView"/>
+
+</menu>

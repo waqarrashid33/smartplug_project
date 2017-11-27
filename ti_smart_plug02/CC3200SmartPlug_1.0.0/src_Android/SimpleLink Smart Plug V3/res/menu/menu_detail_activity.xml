@@ -1,0 +1,26 @@
+<!--
+   Copyright (C) 2013 Texas Instruments Incorporated
+
+   All rights reserved. Property of Texas Instruments Incorporated.
+   Restricted rights to use, duplicate or disclose this code are
+   granted through contract.
+
+   The program may not be used without the written permission of
+   Texas Instruments Incorporated or against the terms and conditions
+   stipulated in the agreement under which this program has been supplied,
+   and under no circumstances can it be used with non-TI connectivity device.
+-->
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	
+	<item android:id="@+id/edit_details"
+	      android:icon="@drawable/ic_menu_edit"
+          android:title="@string/change_device_details"
+          android:showAsAction="ifRoom|withText"/>
+	
+	<item android:id="@+id/delete_device"
+	      android:icon="@drawable/ic_menu_delete"
+          android:title="@string/delete_device"
+          android:showAsAction="ifRoom|withText"/>
+
+</menu>

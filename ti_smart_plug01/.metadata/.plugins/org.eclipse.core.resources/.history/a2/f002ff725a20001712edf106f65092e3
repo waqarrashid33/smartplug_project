@@ -1,0 +1,5 @@
+# FIXED
+
+simplelink/source/flowcont.obj: ../simplelink/source/flowcont.c
+
+../simplelink/source/flowcont.c: 

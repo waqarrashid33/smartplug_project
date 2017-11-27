@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+    Copyright (C) 2015 Texas Instruments Incorporated
+    
+    All rights reserved. Property of Texas Instruments Incorporated.
+    Restricted rights to use, duplicate or disclose this code are
+    granted through contract.
+    
+    The program may not be used without the written permission of
+    Texas Instruments Incorporated or against the terms and conditions
+    stipulated in the agreement under which this program has been supplied,
+    and under no circumstances can it be used with non-TI connectivity device.
+-->
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ti.cc3200smartplug"
+    android:versionCode="1"
+    android:versionName="3.2015.2.26" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="22" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_MULTICAST_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/main_icon"
+        android:label="@string/app_short_name"
+        android:theme="@style/CustomActionBarTheme" android:name="SmartPlugApplication">
+        
+        <activity
+            android:name="com.ti.cc3200smartplug.LoginActivity"
+            android:label="@string/app_short_name"
+            android:launchMode="singleTop"
+            android:configChanges="orientation|screenSize"
+            android:windowSoftInputMode="adjustNothing" >
+            <intent-filter android:label="Smart Plug" >
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <!-- The main activity : DeviceListActivity -->
+        <activity
+            android:name="com.ti.cc3200smartplug.DeviceListActivity"
+            android:label="@string/app_short_name"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName="com.ti.cc3200smartplug.DeviceListActivity" >
+        </activity>
+        
+        <activity
+            android:name="com.ti.cc3200smartplug.DeviceDetailActivity"
+            android:label="@string/default_title_device_detail"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName="com.ti.cc3200smartplug.DeviceListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".DeviceListActivity" />
+        </activity>
+        
+        <activity
+            android:name="com.ti.cc3200smartplug.AddDeviceActivity"
+            android:label="@string/title_activity_add_device"
+            android:configChanges="orientation|screenSize"
+            android:parentActivityName="com.ti.cc3200smartplug.DeviceListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="DeviceListActivity" />
+        </activity>
+
+        <service
+            android:name="com.ti.cc3200smartplug.service.SmartPlugService"
+            android:enabled="true"
+            android:exported="false" >
+            <intent-filter>
+                <action android:name="com.ti.cc3200smartplug" />
+            </intent-filter>
+        </service>
+        
+        <activity
+            android:name="com.ti.cc3200smartplug.mdns.MDNSActivity"
+            android:configChanges="orientation|screenSize"
+            android:label="@string/title_activity_mdns"
+            android:parentActivityName="com.ti.cc3200smartplug.DeviceListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="DeviceListActivity" />
+        </activity>
+    </application>
+
+</manifest>

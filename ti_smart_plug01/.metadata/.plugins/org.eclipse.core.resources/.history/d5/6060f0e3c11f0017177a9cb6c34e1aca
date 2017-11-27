@@ -1,0 +1,18 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+A_SRCS += \
+../simplelink/ccs/OS/simplelink.a 
+
+OPT_SRCS += \
+../simplelink/ccs/OS/ccsObjs.opt 
+
+OPT_SRCS__QUOTED += \
+"../simplelink/ccs/OS/ccsObjs.opt" 
+
+A_SRCS__QUOTED += \
+"../simplelink/ccs/OS/simplelink.a" 
+
+

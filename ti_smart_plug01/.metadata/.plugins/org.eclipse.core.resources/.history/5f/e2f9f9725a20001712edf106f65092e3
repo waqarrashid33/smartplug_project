@@ -1,0 +1,27 @@
+# FIXED
+
+driverlib/aes.obj: ../driverlib/aes.c
+driverlib/aes.obj: /home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdbool.h
+driverlib/aes.obj: /home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdint.h
+driverlib/aes.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_aes.h
+driverlib/aes.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_dthe.h
+driverlib/aes.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_ints.h
+driverlib/aes.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_memmap.h
+driverlib/aes.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_nvic.h
+driverlib/aes.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_types.h
+driverlib/aes.obj: ../driverlib/aes.h
+driverlib/aes.obj: ../driverlib/debug.h
+driverlib/aes.obj: ../driverlib/interrupt.h
+
+../driverlib/aes.c: 
+/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdbool.h: 
+/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdint.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_aes.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_dthe.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_ints.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_memmap.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_nvic.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/inc/hw_types.h: 
+../driverlib/aes.h: 
+../driverlib/debug.h: 
+../driverlib/interrupt.h: 

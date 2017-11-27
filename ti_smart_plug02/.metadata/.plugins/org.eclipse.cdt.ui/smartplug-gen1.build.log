@@ -1,0 +1,7 @@
+
+**** Build of configuration FreeRtos for project smartplug-gen1 ****
+
+/home/waqar/ti/ccsv7/utils/bin/gmake -k all 
+gmake: Nothing to be done for 'all'.
+
+**** Build Finished ****

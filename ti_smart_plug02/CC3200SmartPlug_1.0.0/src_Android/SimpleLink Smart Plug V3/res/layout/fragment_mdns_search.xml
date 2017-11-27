@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fragment_mdns_search"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+    
+    <RelativeLayout android:id="@+id/login"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:text="List will refresh automatically"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+	    <ProgressBar
+	        android:id="@+id/progressBar_mdns_search"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_alignParentEnd="true"
+	        android:layout_alignParentTop="true" />
+
+	    <TextView
+	        android:id="@+id/mdns_textview_wifiOff"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_alignParentRight="true"
+	        android:layout_alignParentEnd="true"
+	        android:layout_centerVertical="true"
+	        android:text="WiFi is Off" />
+	
+	</RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#444466" />
+
+    <ListView
+        android:id="@+id/mdnsList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </ListView>
+
+</LinearLayout>

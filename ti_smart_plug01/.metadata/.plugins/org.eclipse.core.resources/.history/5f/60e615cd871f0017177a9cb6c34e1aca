@@ -1,0 +1,17 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+O_SRCS += \
+../oslib/ewarm/free_rtos/Obj/croutine.o \
+../oslib/ewarm/free_rtos/Obj/heap_3.o \
+../oslib/ewarm/free_rtos/Obj/list.o \
+../oslib/ewarm/free_rtos/Obj/osi_freertos.o \
+../oslib/ewarm/free_rtos/Obj/port.o \
+../oslib/ewarm/free_rtos/Obj/portasm.o \
+../oslib/ewarm/free_rtos/Obj/queue.o \
+../oslib/ewarm/free_rtos/Obj/tasks.o \
+../oslib/ewarm/free_rtos/Obj/timers.o 
+
+

@@ -1,0 +1,29 @@
+# FIXED
+
+third_party/FreeRTOS/source/portable/MemMang/heap_3.obj: ../third_party/FreeRTOS/source/portable/MemMang/heap_3.c
+third_party/FreeRTOS/source/portable/MemMang/heap_3.obj: /home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdlib.h
+third_party/FreeRTOS/source/portable/MemMang/heap_3.obj: /home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/linkage.h
+third_party/FreeRTOS/source/portable/MemMang/heap_3.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/third_party/FreeRTOS/source/include/FreeRTOS.h
+third_party/FreeRTOS/source/portable/MemMang/heap_3.obj: /home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stddef.h
+third_party/FreeRTOS/source/portable/MemMang/heap_3.obj: /home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdint.h
+third_party/FreeRTOS/source/portable/MemMang/heap_3.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/third_party/FreeRTOS/source/include/projdefs.h
+third_party/FreeRTOS/source/portable/MemMang/heap_3.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/third_party/FreeRTOS/source/FreeRTOSConfig.h
+third_party/FreeRTOS/source/portable/MemMang/heap_3.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/third_party/FreeRTOS/source/include/portable.h
+third_party/FreeRTOS/source/portable/MemMang/heap_3.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/third_party/FreeRTOS/source/portable/CCS/ARM_CM3/portmacro.h
+third_party/FreeRTOS/source/portable/MemMang/heap_3.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/third_party/FreeRTOS/source/include/mpu_wrappers.h
+third_party/FreeRTOS/source/portable/MemMang/heap_3.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/third_party/FreeRTOS/source/include/task.h
+third_party/FreeRTOS/source/portable/MemMang/heap_3.obj: /home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/third_party/FreeRTOS/source/include/list.h
+
+../third_party/FreeRTOS/source/portable/MemMang/heap_3.c: 
+/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdlib.h: 
+/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/linkage.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/third_party/FreeRTOS/source/include/FreeRTOS.h: 
+/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stddef.h: 
+/home/waqar/ti/ccsv7/tools/compiler/ti-cgt-arm_16.9.1.LTS/include/stdint.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/third_party/FreeRTOS/source/include/projdefs.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/third_party/FreeRTOS/source/FreeRTOSConfig.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/third_party/FreeRTOS/source/include/portable.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/third_party/FreeRTOS/source/portable/CCS/ARM_CM3/portmacro.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/third_party/FreeRTOS/source/include/mpu_wrappers.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/third_party/FreeRTOS/source/include/task.h: 
+/home/waqar/.wine/drive_c/TI/CC3200SmartPlug_1.0.0/src/third_party/FreeRTOS/source/include/list.h: 

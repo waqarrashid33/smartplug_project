@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <EditText
+        android:id="@+id/edittext_device_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/device_name"
+        android:inputType="text"
+        android:maxLength="@integer/length_max_name"
+        android:maxLines="1"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/edittext_device_serial_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:digits="ABCDEF1234567890"
+         android:maxLength="12"
+        android:hint="@string/device_serial_number"
+        android:inputType="textCapCharacters|textVisiblePassword"
+        android:maxLines="1"
+        android:singleLine="true" />
+
+    <EditText
+        android:id="@+id/edittext_manual_local_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:digits="1234567890."
+        android:ems="10"
+        android:hint="@string/hint_device_local_addr"
+        android:inputType="numberDecimal" />
+    
+    <Spinner
+        android:id="@+id/spinner_dialog_edit_connpref"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:entries="@array/connection_preference"
+        android:prompt="@string/connet_pref_text">
+        <requestFocus />
+    </Spinner>
+
+</merge>

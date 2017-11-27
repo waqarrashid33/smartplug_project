@@ -1,0 +1,5 @@
+# FIXED
+
+third_party/FreeRTOS/source/portable/IAR/ARM_CM4/port.obj: ../third_party/FreeRTOS/source/portable/IAR/ARM_CM4/port.c
+
+../third_party/FreeRTOS/source/portable/IAR/ARM_CM4/port.c: 

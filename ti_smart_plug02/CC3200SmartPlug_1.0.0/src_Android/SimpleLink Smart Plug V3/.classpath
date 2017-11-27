@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="com/ti/cc31xxsmartplug/threads/TCPThread.java|com/ti/cc31xxsmartplug/threads/PostViewGraphCreationThread.java|com/ti/cc31xxsmartplug/data/GraphHistoryData.java|com/ti/cc3200smartplug/Callbacks.java|com/ti/cc3200smartplug/mdns/MDNSStrings.java|com/ti/cc3200smartplug/login/DeviceRegistrationActivity.java|com/ti/cc3200smartplug/login/DeviceRegistrationThread.java|com/ti/cc3200smartplug/exositetask/DeviceRegistrationActivity.java|com/ti/cc3200smartplug/exositetask/DeviceRegistrationThread.java|com/ti/cc3200smartplug/data/DatabaseHelper.java|com/ti/cc3200smartplug/data/DatabaseHelperModified.java" kind="src" path="src"/>
+	<classpathentry kind="src" path="gen"/>
+	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
+	<classpathentry exported="true" kind="con" path="com.android.ide.eclipse.adt.DEPENDENCIES"/>
+	<classpathentry kind="output" path="bin/classes"/>
+</classpath>

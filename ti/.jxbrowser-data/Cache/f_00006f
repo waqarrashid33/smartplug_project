@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>POSIX Project Zero</title>
+</head>
+
+<xmp theme="united2" style="display:none;" class="col-xs-6">
+
+Introduction
+==================================
+POSIX is an IEEE industry API standard for OS compatibility. The [SimpleLink™ software development kits (SDKs)](http://www.ti.com/simplelink) has both TI-RTOS and FreeRTOS support, however it also offers POSIX support on top of either of these RTOS's. This allows applications to be independent of the underlying RTOS.
+
+This workshop provides a simple introduction to using POSIX with the SimpleLink SDK. You will use TI Resource Explorer, the SimpleLink SDK, and CCS Cloud to modify a project and run it on a SimpleLink LaunchPad™ Development Kit. The goal for this project is to familiarize you with some POSIX APIs and concepts typically used in multithreaded applications.
+
+**Here's what we'll learn:**
+* How POSIX is supported with SimpleLink SDK.
+* The basics for creating POSIX threads and controlling their priorities.
+* The basics for creating and using POSIX message queues.
+
+Prerequisites
+==================================
+Recommended background reading
+---------------------------------
+* SimpleLink Academy: [TI Drivers Project Zero](../tidrivers_project_zero/tidrivers_project_zero.html)
+* SimpleLink Academy: [RTOS Concepts](../rtos_concepts/rtos_concepts.html)
+* SimpleLink SDK Quick Start Guide
+
+Software for development
+---------------------------------
+You can follow this tutorial using either of the following:
+
+* Web browser to access [TI Resource Explorer](http://dev.ti.com/tirex/#/) and [CCS Cloud](https://dev.ti.com/ide).
+* Desktop/offline tools if you have downloaded and installed the Code Composer Studio (CCS) 7.1+ IDE and the SimpleLink SDK for your LaunchPad.
+
+Hardware requirements
+---------------------------------
+The TI Drivers are compatible across the entire portfolio of SimpleLink MCU devices. So, you can use this workshop with any MSP432, CC32xx, or CC26xx/CC13xx LaunchPad Development Kit.
+
+POSIX Support in SimpleLink SDK
+==================================
+POSIX is not an RTOS. It resides on top of either TI-RTOS or FreeRTOS. As you can see with the following diagram, POSIX hides the underlying RTOS from the application.
+
+![](./resources/posix_diagram.png)
+
+The SimpleLink SDK supports the following POSIX sets of APIs.
+* Pthread (includes mutexes, barriers, condition variables and read-write locks).
+* Semaphores
+* Clocks/Timers/sleep
+* Message Queue
+
+Please note, not all POSIX APIs are supported in the SimpleLink SDK. For a more details list of the supported APIs and restrictions, please refer to the [POSIX Thread (pthread) Support](http://processors.wiki.ti.com/index.php/SYS/BIOS_POSIX_Thread_%28pthread%29_Support) Texas Instruments wiki page.
+
+Setting up the example project
+==================================
+We will begin with a simple example that uses the UART driver to echo back to the console. We'll then extend that example to add an alarmThread. Once the alarmThread is integrated into the example, your typing an 'X' on the UART console will cause a message to be sent to the alarmThread, which then lights an LED. We'll see how to add in several different POSIX APIs to add this capability.
+
+Task 1: Importing "uartecho" with TI Resource Explorer
+---------------------------------
+[[b! If you are using CCS Cloud, you may be asked to download and install browser extensions.
+Chrome is the recommended browser for developing with CCS Cloud.
+]]
+
+[[y! Before you start
+If you haven't yet gone through the [TI Drivers Project Zero](../tidrivers_project_zero/tidrivers_project_zero.html) workshop, we recommend that you do that first. We'll move quickly through the steps introduced in that workshop here.
+]]
+
+1. Open TI Resource Explorer (either in a [web browser](http://dev.ti.com/tirex/#/) or within an installed version of CCS). In the Search box, type "uartecho" and press **Enter**.
+
+  ![](./resources/search_uartecho.png)
+
+* You will see a list of products that include the simple "uartecho" example, which uses the TI Driver for the UART to echo back to the console. Expand the tree for your device family as shown below until you see the "uartecho" example. Notice that examples are provided for both the FreeRTOS and TI-RTOS kernels (for device families where FreeRTOS is supported) and for both the CCS compiler and the GCC compiler.
+
+  Under the SimpleLink product for your device family, expand `Examples > Development Tools > [LaunchPad] > TI Drivers > uartecho > TI-RTOS > CCS Compiler > uartecho`
+
+  ![](./resources/search_expand.png)
+
+* Import the uartecho example into CCS Cloud by clicking the cloud icon when the project folder is highlighted.
+
+  ![](./resources/import_trex.png)
+
+  If you have not already opened [CCS Cloud](https://dev.ti.com/ide), you will be prompted for your myTI account password. Then, the example will be imported. The uartecho and kernel project will both imported.
+
+  ![](./resources/projects_in_cloud.png)
+
+[[b! For installed IDEs
+If you'd like to import the example into a traditional offline IDE such as CCS or IAR Workbench, click the Download icon to download the entire SimpleLink SDK, which you can use to import the "uartecho" example project into your IDE.
+]]
+
+Task 2. Exploring the uartecho example
+---------------------------------
+As with all TI Driver examples, uartecho is packaged with:
+
+* `README.html`, which you should read to learn how to run the example.
+* `Board.html`, which shows where hardware resources are located on your board and how they can be accessed in your software (for example, on-board LEDs and pushbuttons).
+
+The example contains a number of .c and .h files, but the files you will be modifying in this workshop are:
+
+* `main_tirtos.c`
+* `uartecho.c`
+
+[[b! For FreeRTOS users
+If you chose to import a FreeRTOS version of the example, the file that contains main() is called `main_freertos.c` instead of `main_tirtos.c`.
+]]
+
+### The main_tirtos.c file
+First let's take a look at the `main_tirtos.c` source file -- simply double-click the file to open it in CCS Cloud.
+
+The #include statements and definitions prior to `main()` are as follows:
+
+  ```c
+  #include <stdint.h>
+
+  /* POSIX Header files */
+  #include <pthread.h>
+
+  /* RTOS header files */
+  #include <ti/sysbios/BIOS.h>
+
+  /* Example/Board Header files */
+  #include "Board.h"
+
+  extern void *mainThread(void *arg0);
+
+  /* Stack size in bytes */
+  #define THREADSTACKSIZE    1024
+  ``` **main_tirtos.c**
+
+  * `<pthread.h>` is included so that the POSIX APIs are available.
+  * `<ti/sysbios/BIOS.h>` is included so that the TI-RTOS Kernel is available. TI-RTOS uses a hierarchical module naming convention relative to `<SDK_install_dir>\kernel\tirtos\packages`, so the `BIOS.h` file is located in `<SDK_install_dir>\kernel\tirtos\packages\ti\sysbios`.
+  * `"Board.h"` is located in the uartecho project. It maps device-specific constants for accessing peripherals to device-independent constants used in the examples. For example, it maps `Board_GPIO_LED0` to `CC3220S_LAUNCHXL_GPIO_LED_D7` for the CC3220S.
+  * `mainThread()` is the function defined in `uartecho.c`, which is run by a thread created in main().
+  * `THREADSTACKSIZE` specifies the size of the stack (in bytes) that is allocated for the mainThread.
+
+[[b! For FreeRTOS users
+The `<FreeRTOS.h>` and `<task.h>` headers would be included instead of `<ti/sysbios/BIOS.h>`.
+]]
+
+  Now, let's look at the contents of the `main()` function. This is where we begin to see POSIX APIs. Details about using POSIX threads with the TI-RTOS Kernel and FreeRTOS through the SimpleLink SDK are provided in the [TI Processors wiki](http://processors.wiki.ti.com/index.php/SYS/BIOS_POSIX_Thread_%28pthread%29_Support). For more detail, see the [official specification](http://pubs.opengroup.org/onlinepubs/9699919799/) and documentation of the [generic implementation](https://computing.llnl.gov/tutorials/pthreads/).
+
+
+  ```c
+  int main(void)
+  {
+      pthread_t           thread;
+      pthread_attr_t      pAttrs;
+      struct sched_param  priParam;
+      int                 retc;
+      int                 detachState;
+
+      /* Call driver init functions */
+      Board_initGeneral();
+
+      /* Set priority and stack size attributes */
+      pthread_attr_init(&pAttrs);
+      priParam.sched_priority = 1;
+
+      detachState = PTHREAD_CREATE_DETACHED;
+      retc = pthread_attr_setdetachstate(&pAttrs, detachState);
+      if (retc != 0) {
+          /* pthread_attr_setdetachstate() failed */
+          while (1);
+      }
+
+      pthread_attr_setschedparam(&pAttrs, &priParam);
+
+      retc |= pthread_attr_setstacksize(&pAttrs, THREADSTACKSIZE);
+      if (retc != 0) {
+          /* pthread_attr_setstacksize() failed */
+          while (1);
+      }
+
+      retc = pthread_create(&thread, &pAttrs, mainThread, NULL);
+      if (retc != 0) {
+          /* pthread_create() failed */
+          while (1);
+      }
+
+      BIOS_start();
+
+      return (0);
+  }
+  ``` **main_tirtos.c**
+
+  In general, the `main()` function does the following:
+
+  * `Board_initGeneral()` initializes the board. The `"Board.h"` file maps this device-independent function to a device-specific function. The device-specific function is defined in a device-specific file that is part of your project.
+
+  For example, `CC2640R2_LAUNCHXL.c` contains the `CC2640R2_LAUNCHXL_initGeneral()` function, which initializes the Power Manager and verifies that pins can be accessed. You can add board startup steps to this function if necessary.
+  * The `main()` function then sets attributes for and creates a POSIX thread. The process of creating a thread is described in more detail below.
+  * `BIOS_start()` runs the TI-RTOS Kernel. That is, it causes the kernel's scheduler to take over, and threads that have been created run according to the rules of the scheduler. If this were a FreeRTOS version of the same example, the `vTaskStartScheduler()` function would be run instead.
+  * The `BIOS_start()` function never returns, but `return(0)` is included for completeness.
+
+**See how the POSIX thread was created**
+
+The `pthread_attr_init()` function initializes the `pthread_attr_t` object pointed to by `pAttrs`. Its fields are set to their default values.
+
+The `priParam.sched_priority` field is set to 1. This is the lowest thread priority.
+
+The `pthread_attr_setdetachstate()` function sets the state of the thread to be created as `PTHREAD_CREATE_DETACH`, because you won't be calling `pthread_detach()` and `pthread_join()` to pause and resume execution of this thread.
+
+The `pthread_attr_setstacksize()` function sets the size of the stack (in bytes) that will be allocated for the mainThread.
+
+Once all these attributes have been set, the `pthread_create()` function creates the thread. The thread uses the `pAttrs` set of attributes and the `mainThread` will be the function run by the thread. If you wanted to pass information to the thread function, you could pass something other than NULL as the final function argument. The ID of a successfully created thread is stored in `thread`.
+
+[[b! Corresponding TI-RTOS Kernel code
+In TI-RTOS Kernel terms, this example creates a Task object, whose function runs at a higher priority than the Idle thread. If you were constructing this Task with TI-RTOS Kernel APIs instead of POSIX, the code could look like this:
+  ```c
+  /* Construct BIOS Task */
+  Task_Struct task0Struct;
+  Char task0Stack[THREADSTACKSIZE];
+
+  ...
+
+  Task_Params taskParams;
+
+  Task_Params_init(&taskParams);
+  taskParams.priority = 1;
+  taskParams.stackSize = THREADSTACKSIZE;
+  taskParams.stack = &task0Stack;
+  taskParams.instance->name = "echo";
+  Task_construct(&task0Struct, (Task_FuncPtr)mainThread, &taskParams, NULL);
+  ``` TI-RTOS way to create a thread (aka Task)
+  The above code also provides the stack to minimize memory allocation.
+]]
+
+
+
+### The uartecho.c file
+Now let's look at the `uartecho.c` file, which contains the `mainThread()` function, which is run by the thread created in `main()`.
+
+The thread function performs the following actions before dropping into a loop where the UART is echoed continuously.
+
+  * Initializes the GPIO driver.
+  * Initializes the UART driver.
+  * Turns on the board's LED by writing to the GPIO driver.
+  * Creates a UART object that will send characters to a serial session connected to a COM port (See `README.html` for more details).
+  * Opens the UART object.
+  * Writes "Echoing characters:" to the UART object.
+
+Once in the while loop, the function:
+
+  * Reads a single character from the UART object (the serial session)
+  * Writes a single character back to the UART object.
+
+  ```c
+  void *mainThread(void *arg0)
+  {
+      char        input;
+      const char  echoPrompt[] = "Echoing characters:\r\n";
+      UART_Handle uart;
+      UART_Params uartParams;
+
+      /* Call driver init functions */
+      GPIO_init();
+      UART_init();
+
+      /* Turn on user LED */
+      GPIO_write(Board_GPIO_LED0, Board_GPIO_LED_ON);
+
+      /* Create a UART with data processing off. */
+      UART_Params_init(&uartParams);
+      uartParams.writeDataMode = UART_DATA_BINARY;
+      uartParams.readDataMode = UART_DATA_BINARY;
+      uartParams.readReturnMode = UART_RETURN_FULL;
+      uartParams.readEcho = UART_ECHO_OFF;
+      uartParams.baudRate = 115200;
+
+      uart = UART_open(Board_UART0, &uartParams);
+
+      if (uart == NULL) {
+          /* UART_open() failed */
+          while (1);
+      }
+
+      UART_write(uart, echoPrompt, sizeof(echoPrompt));
+
+      /* Loop forever echoing */
+      while (1) {
+          UART_read(uart, &input, 1);
+          UART_write(uart, &input, 1);
+      }
+  }
+  ``` **uartecho.c**
+
+Task 3: Building and testing uartecho
+---------------------------------
+Before we begin modifying the example, let's test it to verify that it runs.
+
+  1. To build your project in CCS Cloud, simply click the hammer icon. This compiles your code in the cloud and provides a .out file, which you can flash into your device. Alternatively, you can click the Debug icon, which compiles your code and flashes your hardware. It will also jump you into a debug session, where you can step through your code, set breakpoints and watch variables.
+
+  ![](./resources/BUILD.png)
+
+  * To program your LaunchPad, click the "Run" button in CCS Cloud. This builds your project and flashes your hardware with the newly compiled image.
+
+  ![](./resources/run_icon.png)
+
+  * See the `README.html` and `Board.html` files in your project for instructions about running the uartecho example.
+
+Extending your code example
+==================================
+Now we can extend the example to turn on an LED when you type an 'X' on the UART console.
+
+To send an alarm message, we'll use a POSIX message queue with a new POSIX thread called alarmThread. In response to a message on the message queue, this alarmThread will cause an LED on the board to light up.
+
+So, to summarize the changes we'll need to make:
+
+  1. `main()` needs to open a POSIX message queue that will be used to send messages between threads.
+  * `main()` needs to create a POSIX thread to receive and respond to the messages that will be sent. We'll set this to a higher priority so that the alarm will be serviced quickly. The thread to service the alarm will have a function called `alarmThread()`.
+  * `mainThread()` needs to check the input character received from the `UART_read()`. If it is an 'X', it should send a message on the message queue. Otherwise, it should echo the character typed to the UART as usual.
+  * A new function called `alarmThread()` needs to be created to service the alarm. We'll put this in a separate file called `alarm.c`.
+
+[[b! Communication between threads
+Other POSIX tools for synchronizing thread access to shared resources include mutexes, barriers, condition variables, read-write locks, semaphores, and timers.
+]]
+
+Remember that details about using POSIX threads with the TI-RTOS Kernel and FreeRTOS through the SimpleLink SDK are provided in the [TI Processors wiki](http://processors.wiki.ti.com/index.php/SYS/BIOS_POSIX_Thread_%28pthread%29_Support). For more detail, see the [official specification](http://pubs.opengroup.org/onlinepubs/9699919799/) and documentation of the [generic implementation](https://computing.llnl.gov/tutorials/pthreads/).
+
+
+Task 4: Opening a POSIX message queue
+---------------------------------
+POSIX message queues support communication between threads. To enable use of message queues and threads, the file needs to include the header file for POSIX message queues, which is `mqueue.h`. In addition, the GPIO driver needs to be initialized so that we can make sure the LED is off when the message queue is opened.
+
+  1. We'll add code to `main_tirtos.c` to open the POSIX message queue. Open that file (or `main_freertos.c`) for editing.
+  * Add the following statements to the list of #includes before `main()`:
+
+  ```c
+  #include <mqueue.h>
+  #include <ti/drivers/GPIO.h>
+  ``` **main_tirtos.c**
+
+  * Some constants and a global variable are needed in order to use the message queue. Add these statements just before the beginning of `main()`:
+
+  ```c
+  #define MSG_SIZE sizeof(int)
+  #define MSG_NUM  4
+
+  mqd_t mqdes;
+  ``` **main_tirtos.c**
+
+  The `mqdes` variable will receive the message queue descriptor used to access the message queue by the threads. Note: we have this as a global variable to make sure the memory stays persistent.
+
+  * Add the following declaration to the declarations within `main()`. The `attr` structure allows you to specify message queue flags, the maximum number of messages, and the message size for the message queue.
+
+  ```c
+  struct mq_attr      attr;
+  ``` **main_tirtos.c**
+
+  * Add the following code after the call to `Board_initGeneral()`:
+
+  ```c
+  GPIO_init();
+
+  GPIO_write(Board_GPIO_LED0, Board_GPIO_LED_OFF);
+
+  attr.mq_maxmsg = MSG_NUM;
+  attr.mq_msgsize = MSG_SIZE;
+  attr.mq_flags = 0;
+  mqdes = mq_open ("alarm", O_RDWR | O_CREAT,
+                    0664, &attr);
+  if (mqdes == (mqd_t)-1) {
+      /* mq_open() failed */
+      while (1);
+  }
+  ``` **main_tirtos.c**
+
+  This code performs the following:
+    * Initializes the GPIO driver. Previously, this was done in `mainThread()`, so we will need to remove it from there.
+    * Writes to the GPIO driver to turn off the board's LED (just in case).
+    * Sets values for the files in the `attr` structure that will be used when creating the message queue.
+    * Calls `mq_open()` to create and open the message queue. The queue will be named "alarm", created using the provided structure of type `mq_attr` (O_CREAT), and opened for both receiving and sending messages (O_RDWR). The octal value 0664 provides a required mode argument to the O_CREAT flag. (0664 indicates the user and group can read and write, while all others can only read.)
+    * Verifies that the message queue was created successfully. If not, it loops forever.
+
+[[b! Corresponding TI-RTOS Kernel code
+In TI-RTOS Kernel terms, the POSIX message queue is implemented using the Mailbox module.
+]]
+
+Task 5: Creating a POSIX thread to handle the message
+---------------------------------
+Next, `main()` needs to create a POSIX thread to receive and respond to the messages that will be sent.
+
+  1. After the declaration of the `mainThread()` external function, add the following declaration of the `alarmThread()` external function that will service the alarm.
+
+  ```c
+  extern void *alarmThread(void *arg0);
+  ``` **main_tirtos.c**
+
+  * Add the following declaration to the declarations within `main()`. The "alarm" variable will be used when creating the new thread.
+  ```c
+  pthread_t           alarm;
+  ``` **main_tirtos.c**
+
+  * Right before the statement that calls `BIOS_start()`, add the following statements to create another POSIX thread. This thread will have a higher priority so that the alarm can be serviced ahead of echoing other characters that have been typed. A higher number indicates a higher priority. Note: we are using the fact that pAttrs has already been initializated, so we can just change the desired field.
+
+  ```c
+  priParam.sched_priority = 2;
+  pthread_attr_setschedparam(&pAttrs, &priParam);
+
+  retc = pthread_create(&alarm, &pAttrs, alarmThread, (void *)&mqdes);
+  if (retc != 0) {
+      /* pthread_create() failed */
+      while (1);
+  }
+  ``` **main_tirtos.c**
+
+  Notice that the call to `pthread_create()` passes the message queue descriptor `mqdes` to the thread. This allows the thread to access the message queue.
+
+  * The existing `mainThread()` will also need to access the message queue. So, modify the first call to `pthread_create()` to the following (change the `NULL` to `(void *)&mqdes`):
+
+  ```c
+  retc = pthread_create(&thread, &pAttrs, mainThread, (void *)&mqdes);
+  ``` **main_tirtos.c**
+
+  * Save the `main_tirtos.c` file.
+
+  * Here is the full source for `main_tirtos.c` if you want to confirm (or copy)
+   [[+g Full `main_tirtos.c` source
+   ```c
+  /*
+   *  ======== main_tirtos.c ========
+   */
+  #include <stdint.h>
+
+  /* POSIX Header files */
+  #include <pthread.h>
+  #include <mqueue.h>
+
+  #include <ti/drivers/GPIO.h>
+
+  /* RTOS header files */
+  #include <ti/sysbios/BIOS.h>
+
+  /* Example/Board Header files */
+  #include "Board.h"
+
+  extern void *mainThread(void *arg0);
+  extern void *alarmThread(void *arg0);
+
+  /* Stack size in bytes */
+  #define THREADSTACKSIZE    1024
+
+  #define MSG_SIZE sizeof(int)
+  #define MSG_NUM  4
+
+  mqd_t mqdes;
+
+  /*
+   *  ======== main ========
+   */
+  int main(void)
+  {
+      pthread_t           thread;
+      pthread_t           alarm;
+      pthread_attr_t      pAttrs;
+      struct sched_param  priParam;
+      int                 retc;
+      int                 detachState;
+      struct mq_attr      attr;
+
+      /* Call driver init functions */
+      Board_initGeneral();
+      GPIO_init();
+
+      GPIO_write(Board_GPIO_LED0, Board_GPIO_LED_OFF);
+
+      attr.mq_maxmsg = MSG_NUM;
+      attr.mq_msgsize = MSG_SIZE;
+      attr.mq_flags = 0;
+      mqdes = mq_open ("alarm", O_RDWR | O_CREAT,
+                       0664, &attr);
+      if (mqdes == (mqd_t)-1) {
+          /* mq_open() failed */
+          while (1);
+      }
+
+      /* Set priority and stack size attributes */
+      pthread_attr_init(&pAttrs);
+      priParam.sched_priority = 1;
+
+      detachState = PTHREAD_CREATE_DETACHED;
+      retc = pthread_attr_setdetachstate(&pAttrs, detachState);
+      if (retc != 0) {
+          /* pthread_attr_setdetachstate() failed */
+          while (1);
+      }
+
+      pthread_attr_setschedparam(&pAttrs, &priParam);
+
+      retc |= pthread_attr_setstacksize(&pAttrs, THREADSTACKSIZE);
+      if (retc != 0) {
+          /* pthread_attr_setstacksize() failed */
+          while (1);
+      }
+
+      retc = pthread_create(&thread, &pAttrs, mainThread, (void *)&mqdes);
+      if (retc != 0) {
+          /* pthread_create() failed */
+          while (1);
+      }
+
+      /*
+       *  Make the alarm thread a higher priority.
+       */
+      priParam.sched_priority = 2;
+      pthread_attr_setschedparam(&pAttrs, &priParam);
+
+      retc = pthread_create(&alarm, &pAttrs, alarmThread, (void *)&mqdes);
+      if (retc != 0) {
+          /* pthread_create() failed */
+          while (1);
+      }
+
+      BIOS_start();
+
+      return (0);
+  }
+  ``` **main_tirtos.c**
+   +]]
+
+Task 6: Sending a POSIX message
+---------------------------------
+The `mainThread()` function needs to check the input character received from the `UART_read()`. If it is an 'X', it should send a message on the message queue. Then it will echo the character typed to the UART as usual.
+
+  1. Open the `uartecho.c` file from your CCS project.
+  * Since `mainThread()` will need to call `mq_send()`, add the following statement to the list of #include files so that the POSIX module is available.
+
+  ```c
+  #include <mqueue.h>
+  ``` **uartecho.c**
+
+  * In addition, add the following declarations to the declarations at the start of `mainThread()`.
+
+  ```c
+  mqd_t      *mqdes = arg0;
+  int         msg;
+  ``` **uartecho.c**
+
+  * Recall that you moved the initialization and first call to the GPIO driver to `main()`. Delete (or comment out) the following lines from `uartecho.c`.
+
+  ```c
+  //GPIO_init();
+
+  /* Turn on user LED */
+  //GPIO_write(Board_GPIO_LED0, Board_GPIO_LED_ON);
+  ``` **uartecho.c**
+
+  * Finally, add the following statements between the calls to `UART_read()` and `UART_write()`.
+
+  ```c
+  if (input == 'X') {
+      msg = 5;
+      mq_send(*mqdes , (char *)&msg, sizeof(msg), 0);
+  }
+  ``` **uartecho.c**
+
+  If an 'X' was typed, `mq_send()` sends the integer 5 as the message. This value is arbitrary and will not be used by the `alarmThread()`. However, you could further modify the example to take different actions based on the value of the message passed.
+
+  * Save the `uartecho.c` file.
+
+  * Here is the full source for `uartecho.c` if you want to confirm (or copy)
+   [[+g Full `uartecho.c` source
+   ```c
+   /*
+   *  ======== uartecho.c ========
+   */
+  #include <stdint.h>
+  #include <stddef.h>
+
+  #include <mqueue.h>
+
+  /* Driver Header files */
+  #include <ti/drivers/GPIO.h>
+  #include <ti/drivers/UART.h>
+
+  /* Example/Board Header files */
+  #include "Board.h"
+
+  /*
+   *  ======== mainThread ========
+   */
+  void *mainThread(void *arg0)
+  {
+      char        input;
+      const char  echoPrompt[] = "Echoing characters:\r\n";
+      UART_Handle uart;
+      UART_Params uartParams;
+      mqd_t *mqdes = arg0;
+      int msg;
+
+      /* Call driver init functions */
+      UART_init();
+
+      /* Create a UART with data processing off. */
+      UART_Params_init(&uartParams);
+      uartParams.writeDataMode = UART_DATA_BINARY;
+      uartParams.readDataMode = UART_DATA_BINARY;
+      uartParams.readReturnMode = UART_RETURN_FULL;
+      uartParams.readEcho = UART_ECHO_OFF;
+      uartParams.baudRate = 115200;
+
+      uart = UART_open(Board_UART0, &uartParams);
+
+      if (uart == NULL) {
+          /* UART_open() failed */
+          while (1);
+      }
+
+      UART_write(uart, echoPrompt, sizeof(echoPrompt));
+
+      /* Loop forever echoing */
+      while (1) {
+          UART_read(uart, &input, 1);
+          if (input == 'X') {
+              msg = 5;
+              mq_send(*mqdes , (char *)&msg, sizeof(msg), 0);
+          }
+
+          UART_write(uart, &input, 1);
+      }
+  }
+   ``` **uartecho.c**
+   +]]
+
+Task 7: Creating a thread function to receiving the POSIX message
+---------------------------------
+Now we'll create the function to be run by the alarm thread. This function can be placed in a new file called `alarm.c`.
+
+1. In CCS, choose **File > New File**.
+* Paste the following code into the new file, and save the file as `alarm.c` in your CCS project.
+
+  ```c
+  /*
+   *  ======== alarm.c ========
+   */
+
+  #include <pthread.h>
+  #include <mqueue.h>
+
+  /* Driver Header files */
+  #include <ti/drivers/GPIO.h>
+
+  /* Board Header file */
+  #include "Board.h"
+
+  /*
+   *  ======== alarmThread ========
+   */
+  void *alarmThread(void *arg0)
+  {
+      mqd_t *mqdes = arg0;
+      int msg;
+
+      while (mq_receive(*mqdes, (char *)&msg, sizeof(msg), NULL) != -1) {
+          /* Turn on user LED */
+          GPIO_write(Board_GPIO_LED0, Board_GPIO_LED_ON);
+      }
+
+      return(0);
+  }
+  ```  **alarm.c**
+
+  The call to `mq_receive()` gets the message from the queue. If the message is received successfully, it calls `GPIO_write()` to turn on the board's LED.
+
+Task 8: Run the modified program
+---------------------------------
+1. Build and run the program you have modified. In the console, type some characters other than 'X' and then type 'X'. Watch the LED on the board.
+* If you encounter problems, debug the code as necessary and compare your code to the listings above.
+
+Quiz
+=====================================
+Let's see if you picked up some key points...
+
+You have to use POSIX APIs to use TI Drivers?
+
+[quiz]
+x Yes --> Incorrect. POSIX APIs have nothing to do with TI Drivers.
+v No
+[quiz]
+
+What TI-RTOS module is used underneath the POSIX message queues
+
+[quiz]
+x Task --> Incorrect. Task is underneath pthread
+v Mailbox
+x Magic --> Sorry. Harry Potter is not involved.
+[quiz]
+
+Great! Now what?
+=====================================
+You can extend the modified example in several ways. For example, you might want to pass a different message value to turn off the LED. Or, you could add a POSIX timer to turn off the LED after several seconds.
+
+Remember that details about using POSIX threads with the TI-RTOS Kernel and FreeRTOS through the SimpleLink SDK are provided in the [TI Processors wiki](http://processors.wiki.ti.com/index.php/SYS/BIOS_POSIX_Thread_%28pthread%29_Support). For more detail, see the [official specification](http://pubs.opengroup.org/onlinepubs/9699919799/) and documentation of the [generic implementation](https://computing.llnl.gov/tutorials/pthreads/).
+
+Also the TI Resource Explorer provides extensive documentation for TI Drivers, the TI-RTOS Kernel, and more. Documentation that may be especially helpful after you have completed this workshop is highlighted below.
+
+  > ![](./resources/docs_nowwhat.png)
+
+</xmp>
+
+<div align="center" style="margin-top: 4em;">
+<a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="../../web_support/cc_license_icon.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.</div>
+
+
+<link rel="stylesheet" href="../../web_support/highlight/styles/zenburn.css"/>
+<script src="../../web_support/strapdown/vendor/jquery-1.11.2.min.js"></script>
+<script src="../../web_support/strapdown/vendor/bootstrap.min.js"></script>
+<script src="../../web_support/highlight/highlight.pack.js"></script>
+<script src="../../web_support/strapdown/v/0.2/strapdown.js"></script>
+
+</html>

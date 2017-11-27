@@ -1,0 +1,31 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+# Add inputs and outputs from these tool invocations to the build variables 
+O_SRCS += \
+../driverlib/ewarm/Release/Obj/adc.o \
+../driverlib/ewarm/Release/Obj/aes.o \
+../driverlib/ewarm/Release/Obj/camera.o \
+../driverlib/ewarm/Release/Obj/cpu.o \
+../driverlib/ewarm/Release/Obj/crc.o \
+../driverlib/ewarm/Release/Obj/des.o \
+../driverlib/ewarm/Release/Obj/flash.o \
+../driverlib/ewarm/Release/Obj/gpio.o \
+../driverlib/ewarm/Release/Obj/hwspinlock.o \
+../driverlib/ewarm/Release/Obj/i2c.o \
+../driverlib/ewarm/Release/Obj/i2s.o \
+../driverlib/ewarm/Release/Obj/interrupt.o \
+../driverlib/ewarm/Release/Obj/pin.o \
+../driverlib/ewarm/Release/Obj/prcm.o \
+../driverlib/ewarm/Release/Obj/sdhost.o \
+../driverlib/ewarm/Release/Obj/shamd5.o \
+../driverlib/ewarm/Release/Obj/spi.o \
+../driverlib/ewarm/Release/Obj/systick.o \
+../driverlib/ewarm/Release/Obj/timer.o \
+../driverlib/ewarm/Release/Obj/uart.o \
+../driverlib/ewarm/Release/Obj/udma.o \
+../driverlib/ewarm/Release/Obj/utils.o \
+../driverlib/ewarm/Release/Obj/wdt.o 
+
+

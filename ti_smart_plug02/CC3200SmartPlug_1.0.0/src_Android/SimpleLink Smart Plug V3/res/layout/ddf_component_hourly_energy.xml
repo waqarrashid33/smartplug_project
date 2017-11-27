@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/ddf_row_height"
+    android:layout_marginLeft="@dimen/ddf_horizontal_margin"
+    android:layout_marginRight="@dimen/ddf_horizontal_margin" >
+
+    <TextView
+        android:id="@+id/TextView09"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:text="Hourly Average Energy" />
+
+    <TextView
+        android:id="@+id/TextView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:text="@string/COS_unit_text" />
+
+    <TextView
+        android:id="@+id/hourlyAverage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_toLeftOf="@+id/TextView17"
+        android:layout_toStartOf="@+id/TextView17"
+        android:text="@string/default_data_value" />
+
+    <TextView
+        android:id="@+id/TextView17"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:text="@string/power_unit_text" />
+
+</RelativeLayout>

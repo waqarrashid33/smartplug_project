@@ -1,0 +1,15 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/orange_warning_background" >
+
+    <TextView
+        android:id="@+id/warning_message_not_signed_in"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_margin="6dp"
+        android:text="You have not signed into your cloud account. Please click here for more information." />
+
+</RelativeLayout>

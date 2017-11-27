@@ -1,0 +1,417 @@
+<!--
+   Copyright (C) 2014 Texas Instruments Incorporated
+
+   All rights reserved. Property of Texas Instruments Incorporated.
+   Restricted rights to use, duplicate or disclose this code are
+   granted through contract.
+
+   The program may not be used without the written permission of
+   Texas Instruments Incorporated or against the terms and conditions
+   stipulated in the agreement under which this program has been supplied,
+   and under no circumstances can it be used with non-TI connectivity device.-->
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/holo_light_background_color"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:id="@+id/form"
+    tools:context=".DeviceDetailFragment" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/divider"
+        android:orientation="vertical" >
+
+      <TableLayout
+            android:id="@+id/table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TableRow
+                android:id="@+id/tableRow1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="1dp"
+                android:minHeight="36dp" >
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    layout="@layout/ddf_component_device_name" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1" >
+
+                    <include
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/ddf_row_height"
+                        android:layout_marginLeft="@dimen/ddf_horizontal_margin"
+                        android:layout_marginRight="@dimen/ddf_horizontal_margin"
+                        layout="@layout/ddf_component_device_status" />
+                    
+                    <include
+                        android:id="@+id/devider_ref"
+	                    android:layout_width="match_parent"
+	                    android:layout_height="@dimen/ddf_divider_height"
+	                    android:layout_marginLeft="@dimen/ddf_divider_margin"
+	                    android:layout_marginRight="@dimen/ddf_divider_margin"
+	                    layout="@layout/ddf_component_divider" />
+                    
+                    <include
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/ddf_row_height"
+                        android:layout_marginLeft="@dimen/ddf_horizontal_margin"
+                        android:layout_marginRight="@dimen/ddf_horizontal_margin"
+                        layout="@layout/ddf_component_device_switch" />
+
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRowDivider1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ddf_divider_height"
+                    android:layout_marginLeft="@dimen/ddf_divider_margin"
+                    android:layout_marginRight="@dimen/ddf_divider_margin"
+                    android:layout_weight="1" />
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ddf_divider_height"
+                    android:layout_marginLeft="@dimen/ddf_divider_margin"
+                    android:layout_marginRight="@dimen/ddf_divider_margin"
+                    android:layout_weight="1"
+                    layout="@layout/ddf_component_divider" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ddf_row_height"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/ddf_horizontal_margin"
+                    android:layout_marginRight="@dimen/ddf_horizontal_margin"
+                    android:layout_weight="1"
+                    layout="@layout/ddf_component_mac_address" />
+                
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ddf_row_height"
+                    android:layout_marginLeft="@dimen/ddf_horizontal_margin"
+                    android:layout_marginRight="@dimen/ddf_horizontal_margin"
+                    android:layout_weight="1"
+                    layout="@layout/ddf_component_buttons4" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRowDivider2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ddf_divider_height"
+                    android:layout_marginLeft="@dimen/ddf_divider_margin"
+                    android:layout_marginRight="@dimen/ddf_divider_margin"
+                    android:layout_weight="1"
+                    layout="@layout/ddf_component_divider" />
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ddf_divider_height"
+                    android:layout_marginLeft="@dimen/ddf_divider_margin"
+                    android:layout_marginRight="@dimen/ddf_divider_margin"
+                    android:layout_weight="1"
+                    layout="@layout/ddf_component_divider" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ddf_row_height"
+                    android:layout_marginLeft="@dimen/ddf_horizontal_margin"
+                    android:layout_marginRight="@dimen/ddf_horizontal_margin"
+                    android:layout_weight="1"
+                    layout="@layout/ddf_component_power" />
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ddf_row_height"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/ddf_horizontal_margin"
+                    android:layout_marginRight="@dimen/ddf_horizontal_margin"
+                    android:layout_weight="1"
+                    layout="@layout/ddf_component_total_e" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRowDivider3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ddf_divider_height"
+                    android:layout_marginLeft="@dimen/ddf_divider_margin"
+                    android:layout_marginRight="@dimen/ddf_divider_margin"
+                    android:layout_weight="1"
+                    layout="@layout/ddf_component_divider" />
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ddf_divider_height"
+                    android:layout_marginLeft="@dimen/ddf_divider_margin"
+                    android:layout_marginRight="@dimen/ddf_divider_margin"
+                    android:layout_weight="1"
+                    layout="@layout/ddf_component_divider" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ddf_row_height"
+                    android:layout_marginLeft="@dimen/ddf_horizontal_margin"
+                    android:layout_marginRight="@dimen/ddf_horizontal_margin"
+                    android:layout_weight="1"
+                    layout="@layout/ddf_component_power2" />
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ddf_row_height"
+                    android:layout_marginLeft="@dimen/ddf_horizontal_margin"
+                    android:layout_marginRight="@dimen/ddf_horizontal_margin"
+                    android:layout_weight="1"
+                    layout="@layout/ddf_component_hourly_energy" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRowDivider4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ddf_divider_height"
+                    android:layout_marginLeft="@dimen/ddf_divider_margin"
+                    android:layout_marginRight="@dimen/ddf_divider_margin"
+                    android:layout_weight="1"
+                    layout="@layout/ddf_component_divider" />
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ddf_divider_height"
+                    android:layout_marginLeft="@dimen/ddf_divider_margin"
+                    android:layout_marginRight="@dimen/ddf_divider_margin"
+                    android:layout_weight="1"
+                    layout="@layout/ddf_component_divider" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ddf_row_height"
+                    android:layout_marginLeft="@dimen/ddf_horizontal_margin"
+                    android:layout_marginRight="@dimen/ddf_horizontal_margin"
+                    android:layout_weight="1"
+                    layout="@layout/ddf_component_pf" />
+                
+         		<include
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ddf_row_height"
+                    android:layout_marginLeft="@dimen/ddf_horizontal_margin"
+                    android:layout_marginRight="@dimen/ddf_horizontal_margin"
+                    android:layout_weight="1"
+                    layout="@layout/ddf_component_relay" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRowDivider5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ddf_divider_height"
+                    android:layout_marginLeft="@dimen/ddf_divider_margin"
+                    android:layout_marginRight="@dimen/ddf_divider_margin"
+                    android:layout_weight="1"
+                    layout="@layout/ddf_component_divider" />
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ddf_divider_height"
+                    android:layout_marginLeft="@dimen/ddf_divider_margin"
+                    android:layout_marginRight="@dimen/ddf_divider_margin"
+                    android:layout_weight="1"
+                    layout="@layout/ddf_component_divider" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ddf_row_height"
+                    android:layout_marginLeft="@dimen/ddf_horizontal_margin"
+                    android:layout_marginRight="@dimen/ddf_horizontal_margin"
+                    android:layout_weight="1"
+                    layout="@layout/ddf_component_voltage" />
+                
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ddf_row_height"
+                    android:layout_marginLeft="@dimen/ddf_horizontal_margin"
+                    android:layout_marginRight="@dimen/ddf_horizontal_margin"
+                    android:layout_weight="1"
+                    layout="@layout/ddf_component_buttons1" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRowDivider6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ddf_divider_height"
+                    android:layout_marginLeft="@dimen/ddf_divider_margin"
+                    android:layout_marginRight="@dimen/ddf_divider_margin"
+                    android:layout_weight="1"
+                    layout="@layout/ddf_component_divider" />
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ddf_divider_height"
+                    android:layout_marginLeft="@dimen/ddf_divider_margin"
+                    android:layout_marginRight="@dimen/ddf_divider_margin"
+                    android:layout_weight="1"
+                    layout="@layout/ddf_component_divider" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ddf_row_height"
+                    android:layout_marginLeft="@dimen/ddf_horizontal_margin"
+                    android:layout_marginRight="@dimen/ddf_horizontal_margin"
+                    android:layout_weight="1"
+                    layout="@layout/ddf_component_current" />
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ddf_row_height"
+                    android:layout_marginLeft="@dimen/ddf_horizontal_margin"
+                    android:layout_marginRight="@dimen/ddf_horizontal_margin"
+                    android:layout_weight="1"
+                    layout="@layout/ddf_component_buttons2" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRowDivider7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ddf_divider_height"
+                    android:layout_marginLeft="@dimen/ddf_divider_margin"
+                    android:layout_marginRight="@dimen/ddf_divider_margin"
+                    android:layout_weight="1"
+                    layout="@layout/ddf_component_divider" />
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ddf_divider_height"
+                    android:layout_marginLeft="@dimen/ddf_divider_margin"
+                    android:layout_marginRight="@dimen/ddf_divider_margin"
+                    android:layout_weight="1"
+                    layout="@layout/ddf_component_divider" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/tableRow8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ddf_row_height"
+                    android:layout_marginLeft="@dimen/ddf_horizontal_margin"
+                    android:layout_marginRight="@dimen/ddf_horizontal_margin"
+                    android:layout_weight="1"
+                    layout="@layout/ddf_component_frequency" />
+                
+                <include
+                    android:layout_width="0dp"
+                    android:layout_height="@dimen/ddf_row_height"
+                    android:layout_marginLeft="@dimen/ddf_horizontal_margin"
+                    android:layout_marginRight="@dimen/ddf_horizontal_margin"
+                    android:layout_weight="1"
+                    layout="@layout/ddf_component_buttons3" />
+            </TableRow>
+        </TableLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/TI_COLOR_BLACK" />
+
+        <RelativeLayout
+	        android:id="@+id/device_detail"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:layout_marginLeft="@dimen/ddf_horizontal_margin"
+	        android:layout_marginRight="@dimen/ddf_horizontal_margin"
+	        android:layout_marginTop="@dimen/ddf_horizontal_margin" >
+	
+	        <Spinner
+	            android:id="@+id/spinnerGraphOption"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:layout_alignParentStart="true"
+	            android:layout_alignParentTop="true"
+	            android:entries="@array/graph_type" />
+	        
+	        <View
+		        android:id="@+id/graphing_area"
+		        android:layout_width="match_parent"
+		        android:layout_height="256dp" />
+	    </RelativeLayout>
+    </LinearLayout>
+
+</ScrollView>

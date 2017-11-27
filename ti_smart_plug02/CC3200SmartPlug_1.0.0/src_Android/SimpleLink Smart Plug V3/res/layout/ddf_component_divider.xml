@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<View xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view1"
+    android:layout_width="0dp"
+    android:layout_height="@dimen/ddf_divider_height"
+    android:background="@color/TI_COLOR_GRAY" />

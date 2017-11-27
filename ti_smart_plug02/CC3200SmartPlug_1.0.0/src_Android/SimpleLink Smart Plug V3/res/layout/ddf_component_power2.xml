@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/ddf_row_height"
+    android:layout_marginLeft="@dimen/ddf_horizontal_margin"
+    android:layout_marginRight="@dimen/ddf_horizontal_margin" >
+
+    <TextView
+        android:id="@+id/TextView07"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:text="@string/VAR_text" />
+    
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextView07"
+        android:layout_alignBottom="@+id/TextView07"
+        android:layout_toRightOf="@+id/TextView07"
+        android:layout_toEndOf="@+id/TextView07"
+        android:text="/" />
+    
+    <TextView
+        android:id="@+id/TextView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextView01"
+        android:layout_alignBottom="@+id/TextView01"
+        android:layout_toRightOf="@+id/TextView01"
+        android:text="@string/VA_text" />
+
+    <TextView
+        android:id="@+id/TextView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:text="@string/VAR_unit_text" />
+
+    <TextView
+        android:id="@+id/VA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextView15"
+        android:layout_alignBottom="@+id/TextView15"
+        android:layout_toLeftOf="@+id/TextView15"
+        android:text="@string/default_data_value" />
+
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/VA"
+        android:layout_alignBottom="@+id/VA"
+        android:layout_toLeftOf="@+id/VA"
+        android:text="/" />
+
+    <TextView
+        android:id="@+id/VAR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/TextView02"
+        android:layout_alignBottom="@+id/TextView02"
+        android:layout_toLeftOf="@+id/TextView02"
+        android:text="@string/default_data_value" />
+
+</RelativeLayout>
