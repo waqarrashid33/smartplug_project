@@ -1,5 +1,0 @@
-# FIXED
-
-simplelink/cc_pal_pm.obj: ../simplelink/cc_pal_pm.c
-
-../simplelink/cc_pal_pm.c: 

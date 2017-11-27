@@ -1,5 +1,0 @@
-# FIXED
-
-simplelink/source/netcfg.obj: ../simplelink/source/netcfg.c
-
-../simplelink/source/netcfg.c: 

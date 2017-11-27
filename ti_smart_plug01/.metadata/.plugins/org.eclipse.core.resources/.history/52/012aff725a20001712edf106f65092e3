@@ -1,5 +1,0 @@
-# FIXED
-
-simplelink/source/spawn.obj: ../simplelink/source/spawn.c
-
-../simplelink/source/spawn.c: 

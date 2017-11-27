@@ -1,5 +1,0 @@
-# FIXED
-
-simplelink/source/device.obj: ../simplelink/source/device.c
-
-../simplelink/source/device.c: 

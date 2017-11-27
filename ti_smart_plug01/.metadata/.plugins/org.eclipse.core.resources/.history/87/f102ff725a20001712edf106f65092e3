@@ -1,5 +1,0 @@
-# FIXED
-
-simplelink/source/fs.obj: ../simplelink/source/fs.c
-
-../simplelink/source/fs.c: 

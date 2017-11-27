@@ -1,5 +1,0 @@
-# FIXED
-
-simplelink/source/socket.obj: ../simplelink/source/socket.c
-
-../simplelink/source/socket.c: 

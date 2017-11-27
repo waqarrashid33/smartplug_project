@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete 5 resources" deleteContents="false" description="Delete 5 resources" element1="/driverlib" element2="/oslib" element3="/simplelink" element4="/ti_rtos_config" element5="/wlan_station" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="5" stamp="1491996946973"/>&#x0A;<refactoring comment="Delete resource &apos;ti_rtos_config&apos;" deleteContents="true" description="Delete resource &apos;ti_rtos_config&apos;" element1="/ti_rtos_config" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1491999492214"/>
-</session>

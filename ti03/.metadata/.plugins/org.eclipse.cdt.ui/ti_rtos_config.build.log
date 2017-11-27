@@ -1,8 +1,0 @@
-
-**** Build of configuration Default for project ti_rtos_config ****
-
-/home/waqar/ti/ccsv7/utils/bin/gmake -k all 
-gmake[1]: Nothing to be done for 'configPkg/linker.cmd'.
-gmake[1]: Nothing to be done for 'main-build'.
-
-**** Build Finished ****
